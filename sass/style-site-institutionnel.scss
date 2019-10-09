@@ -1,4 +1,5 @@
-$greenColor: '#195C1D';
+$greenColor: '#38AE3F';
+
 @font-face {
     font-family: "Matrix";
     src: url("../fonts/matrix.ttf");
@@ -20,9 +21,21 @@ a {
     color: white;
     text-decoration: none;
 }
-.matrix-container {
+
+.matrix-canvas {
     width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
 }
+
+.main-container {
+    position: relative;
+    top: 0%;
+    z-index: 2;
+}
+
 
 header {
     width: 1398px;
@@ -49,7 +62,7 @@ header {
         margin-top: 20px;
 
         &:hover {
-            filter: invert(26%) sepia(47%) saturate(785%) hue-rotate(74deg) brightness(93%) contrast(91%);
+            filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%);
         }
     }
 }
@@ -58,13 +71,46 @@ main{
     width: 100%;
 }
 
+.extracts-section {
+    width: 1388px;
+    margin: 0 auto;
+    
+}
+
+
+.extracts-section__scene {
+    width: 416px;
+    height: 602px;
+    position: relative;
+    
+}
+
+
+
+.extracts-section__scene__shaderDiv{
+    position: absolute;
+    left: 130px;
+    top: 48px;
+    height: 611px;
+    width: 151px;
+    z-index: -1;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    transform: skew(-43deg) rotate(-32deg);
+    box-shadow: 0px 0px 120px 50px rgba(81, 220, 48, 0.3);
+}
+
+
+/*
+ABOUT
+*/
+
 .main__about{
     font-family: 'Courier';
     padding: 10px;
     position: relative;
-    max-width: 1024px;
-    height: auto;
-    width: 60%;
+    height: 550px;
+    width: 850px;
     background: black;
     border: 1px solid black;
     border-left-width: 0px;
@@ -94,7 +140,7 @@ main{
     -webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
     transform: skew(-20deg);
-    box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.76);
+    box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.6);
 
 }
 .main__about::after{
@@ -110,7 +156,7 @@ main{
     -webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
     transform: skew(-20deg);
-    box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.76);
+    box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.6);
 
 }
 
@@ -152,6 +198,7 @@ div[class^="about_"] ul li{
 .about__last{
     text-align: center;
     font-size: 25px;
+    margin-top: 79px;
 }
 
 .social{
@@ -165,6 +212,7 @@ div[class^="about_"] ul li{
 
 .social a{
     margin: 30px auto;
+    margin-left: 141px;
     cursor: pointer;
 }
 
@@ -174,6 +222,8 @@ div[class^="about_"] ul li{
     width: 40px;
     transform: rotate(90deg);
     margin-bottom: 60px;
+    margin-left: 132px;
+    z-index: 7;
 }
 
 .social::after{
@@ -182,4 +232,5 @@ div[class^="about_"] ul li{
     width: 40px;
     transform: rotate(90deg);
     margin-top: 60px;
+    margin-left: 132px;
 }
