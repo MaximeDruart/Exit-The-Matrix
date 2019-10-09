@@ -35,4 +35,110 @@ header {
     header .header--ButtonMenu:hover {
       filter: invert(26%) sepia(47%) saturate(785%) hue-rotate(74deg) brightness(93%) contrast(91%); }
 
+main {
+  width: 100%; }
+
+.main__about {
+  padding: 10px;
+  position: relative;
+  max-width: 1024px;
+  height: auto;
+  width: 60%;
+  background: black;
+  border: 1px solid black;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  top: 200px;
+  margin: 0 auto; }
+
+.main__flex {
+  display: flex; }
+
+.main__about::before {
+  position: absolute;
+  content: '';
+  left: -16%;
+  top: -1px;
+  height: 100%;
+  width: 60%;
+  background: black;
+  border: 1px solid black;
+  z-index: -1;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  transform: skew(-20deg);
+  box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.76); }
+
+.main__about::after {
+  position: absolute;
+  content: '';
+  left: 55%;
+  top: -1px;
+  height: 100%;
+  width: 60%;
+  background: black;
+  border: 1px solid black;
+  z-index: -1;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  transform: skew(-20deg);
+  box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.76); }
+
+div[class^="about_"] {
+  color: #ffffff;
+  padding: 20px; }
+
+div[class^="about_"] h3 {
+  color: #1B791C; }
+
+div[class^="about_"] img {
+  margin-top: 30px; }
+
+div[class^="about_"] ul {
+  list-style: none;
+  width: max-content;
+  padding: 0;
+  margin: 0; }
+
+div[class^="about_"] ul li {
+  margin-top: 15px; }
+
+.about__synopsis p {
+  max-width: 400px;
+  min-width: 300px; }
+
+.about__production {
+  text-align: center; }
+
+.about__last {
+  text-align: center;
+  font-size: 25px; }
+
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  left: 20px;
+  top: 35%; }
+
+.social a {
+  margin-top: 50px;
+  margin: 20px auto;
+  cursor: pointer; }
+
+.social::before {
+  content: '';
+  border: 1px #ffffff solid;
+  width: 40px;
+  transform: rotate(90deg);
+  margin-bottom: 50px; }
+
+.social::after {
+  content: '';
+  border: 1px #ffffff solid;
+  width: 40px;
+  transform: rotate(90deg);
+  margin-top: 50px; }
+
 /*# sourceMappingURL=style-site-institutionnel.css.map */
