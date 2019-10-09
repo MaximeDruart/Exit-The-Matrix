@@ -4,15 +4,20 @@ $greenColor: '#195C1D';
     src: url("../fonts/matrix.ttf");
 }
 
+
+
+
 body {
     background-color: black;
     color: white;
     font-size: 20px;
+    top: 0;
 }
 a {
     color: white;
     text-decoration: none;
 }
+
 .matrix-container {
     width: 100%;
 }
