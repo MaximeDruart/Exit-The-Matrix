@@ -1,11 +1,9 @@
-$greenColor: '#195C1D';
+$greenColor: '#38AE3F';
+
 @font-face {
     font-family: "Matrix";
     src: url("../fonts/matrix.ttf");
 }
-
-
-
 
 body {
     background-color: black;
@@ -18,9 +16,18 @@ a {
     text-decoration: none;
 }
 
-.matrix-container {
+.matrix-canvas {
     width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
 }
+
+.main-container {
+    position: relative;
+    top: 0%;
+}
+
 
 header {
     width: 1398px;
@@ -47,7 +54,7 @@ header {
         margin-top: 20px;
 
         &:hover {
-            filter: invert(26%) sepia(47%) saturate(785%) hue-rotate(74deg) brightness(93%) contrast(91%);
+            filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%)
         }
     }
 }

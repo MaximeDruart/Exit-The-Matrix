@@ -11,8 +11,15 @@ a {
   color: white;
   text-decoration: none; }
 
-.matrix-container {
-  width: 100%; }
+.matrix-canvas {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+
+.main-container {
+  position: relative;
+  top: 0%; }
 
 header {
   width: 1398px;
@@ -34,7 +41,7 @@ header {
     display: inline-block;
     margin-top: 20px; }
     header .header--ButtonMenu:hover {
-      filter: invert(26%) sepia(47%) saturate(785%) hue-rotate(74deg) brightness(93%) contrast(91%); }
+      filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%); }
 
 main {
   width: 100%; }
