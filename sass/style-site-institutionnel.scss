@@ -1,0 +1,48 @@
+$greenColor: '#195C1D';
+@font-face {
+    font-family: "Matrix";
+    src: url("../fonts/matrix.ttf");
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.matrix-container {
+    width: 100%;
+}
+
+header {
+    width: 1398px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    .header--Mainlogo {
+        font-family: 'Matrix';
+        font-size: 3.15em;
+        font-weight: 500;
+        margin: 0;
+        
+    }
+
+    .header--ButtonMenu {
+        width: 23px;
+        height: 23px;
+        background-image: url('../images/buttonMenu.svg');
+        filter: brightness(0) invert(1);
+        background-size: cover;
+        display: inline-block;
+        margin-top: 20px;
+
+        &:hover {
+            filter: invert(26%) sepia(47%) saturate(785%) hue-rotate(74deg) brightness(93%) contrast(91%);
+        }
+    }
+}
