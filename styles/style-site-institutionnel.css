@@ -8,7 +8,8 @@ body {
   background-color: black;
   color: white;
   font-size: 20px;
-  font-family: 'Courier New', Courier, monospace; }
+  font-family: 'Courier New', Courier, monospace;
+  cursor: url("../images/cursor.png"), default; }
 
 a {
   color: white;
@@ -53,24 +54,62 @@ main {
 
 .extracts-section {
   width: 1388px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 79px; }
 
-.extracts-section__scene {
-  width: 416px;
-  height: 602px;
-  position: relative; }
-
-.extracts-section__scene__shaderDiv {
-  position: absolute;
-  left: 130px;
-  top: 48px;
+.extracts-section__shadowDiv {
+  z-index: 3;
+  position: relative;
   height: 611px;
   width: 151px;
-  z-index: -1;
-  -webkit-transform: skew(-20deg);
-  -moz-transform: skew(-20deg);
-  transform: skew(-43deg) rotate(-32deg);
-  box-shadow: 0px 0px 120px 50px rgba(81, 220, 48, 0.3); }
+  width: 197px;
+  height: 602px;
+  transform: skew(-13deg);
+  box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3);
+  margin: 0 25px; }
+
+.extracts-section__sceneImage {
+  width: 416px;
+  height: 602px;
+  position: absolute;
+  z-index: 4;
+  transform: skew(17deg);
+  left: -98px; }
+  .extracts-section__sceneImage:hover {
+    width: 480px;
+    height: 680px;
+    z-index: 5;
+    top: -40px;
+    left: -145px;
+    animation: imageHover 0.5s; }
+
+.menuDiv {
+  width: 1244px;
+  height: 602px;
+  transform: skew(-13deg);
+  background: black;
+  position: absolute;
+  z-index: 6;
+  animation: displayDivMenu 0.5s;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .menuDiv__recue {
+    color: #1B791C;
+    border: solid 2px #1B791C;
+    padding: 14px 29px; }
+    .menuDiv__recue:hover {
+      background-color: #1B791C;
+      color: black; }
+  .menuDiv__about {
+    color: #1B791C;
+    margin-top: 20px; }
+
+.displayMenu {
+  display: flex; }
 
 /*
 ABOUT
@@ -186,5 +225,18 @@ div[class^="about_"] ul li {
   transform: rotate(90deg);
   margin-top: 60px;
   margin-left: 132px; }
+
+@keyframes imageHover {
+  from {
+    width: 416px;
+    height: 602px;
+    z-index: 4;
+    left: -98px; }
+  to {
+    width: 480px;
+    height: 680px;
+    z-index: 5;
+    top: -40px;
+    left: -145px; } }
 
 /*# sourceMappingURL=style-site-institutionnel.css.map */
