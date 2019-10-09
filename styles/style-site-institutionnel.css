@@ -18,11 +18,13 @@ a {
   width: 100%;
   position: absolute;
   top: 0%;
-  left: 0%; }
+  left: 0%;
+  z-index: 1; }
 
 .main-container {
   position: relative;
-  top: 0%; }
+  top: 0%;
+  z-index: 2; }
 
 header {
   width: 1398px;
@@ -53,9 +55,8 @@ main {
   font-family: 'Courier';
   padding: 10px;
   position: relative;
-  max-width: 1024px;
-  height: auto;
-  width: 60%;
+  height: 550px;
+  width: 850px;
   background: black;
   border: 1px solid black;
   border-left-width: 0px;
@@ -82,7 +83,7 @@ main {
   -webkit-transform: skew(-20deg);
   -moz-transform: skew(-20deg);
   transform: skew(-20deg);
-  box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.76); }
+  box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.6); }
 
 .main__about::after {
   position: absolute;
@@ -97,7 +98,7 @@ main {
   -webkit-transform: skew(-20deg);
   -moz-transform: skew(-20deg);
   transform: skew(-20deg);
-  box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.76); }
+  box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.6); }
 
 div[class^="about_"] {
   color: #ffffff;
@@ -129,7 +130,8 @@ div[class^="about_"] ul li {
 
 .about__last {
   text-align: center;
-  font-size: 25px; }
+  font-size: 25px;
+  margin-top: 79px; }
 
 .social {
   position: fixed;
@@ -141,6 +143,7 @@ div[class^="about_"] ul li {
 
 .social a {
   margin: 30px auto;
+  margin-left: 141px;
   cursor: pointer; }
 
 .social::before {
@@ -148,13 +151,16 @@ div[class^="about_"] ul li {
   border: 1px #ffffff solid;
   width: 40px;
   transform: rotate(90deg);
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  margin-left: 132px;
+  z-index: 7; }
 
 .social::after {
   content: '';
   border: 1px #ffffff solid;
   width: 40px;
   transform: rotate(90deg);
-  margin-top: 60px; }
+  margin-top: 60px;
+  margin-left: 132px; }
 
 /*# sourceMappingURL=style-site-institutionnel.css.map */
