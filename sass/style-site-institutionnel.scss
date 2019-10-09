@@ -62,7 +62,7 @@ header {
         margin-top: 20px;
 
         &:hover {
-            filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%)
+            filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%);
         }
     }
 }
@@ -70,6 +70,40 @@ header {
 main{
     width: 100%;
 }
+
+.extracts-section {
+    width: 1388px;
+    margin: 0 auto;
+    
+}
+
+
+.extracts-section__scene {
+    width: 416px;
+    height: 602px;
+    position: relative;
+    
+}
+
+
+
+.extracts-section__scene__shaderDiv{
+    position: absolute;
+    left: 130px;
+    top: 48px;
+    height: 611px;
+    width: 151px;
+    z-index: -1;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    transform: skew(-43deg) rotate(-32deg);
+    box-shadow: 0px 0px 120px 50px rgba(81, 220, 48, 0.3);
+}
+
+
+/*
+ABOUT
+*/
 
 .main__about{
     font-family: 'Courier';
