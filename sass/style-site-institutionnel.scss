@@ -98,6 +98,16 @@ main{
     z-index: 4;
     transform: skew(17deg);
     left: -98px;
+    
+
+    &:hover {
+        width: 480px;
+        height: 680px;
+        z-index: 5;
+        top: -40px;
+        left: -145px;
+        animation: imageHover 0.5s;
+    }
 }
 
 
@@ -234,3 +244,22 @@ div[class^="about_"] ul li{
     margin-top: 60px;
     margin-left: 132px;
 }
+
+@keyframes imageHover {
+    from {
+
+        width: 416px;
+        height: 602px;
+        z-index: 4;
+        left: -98px;
+    
+    }
+  
+    to {
+        width: 480px;
+        height: 680px;
+        z-index: 5;
+        top: -40px;
+        left: -145px;
+    }
+  }
