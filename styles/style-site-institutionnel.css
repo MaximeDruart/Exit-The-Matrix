@@ -8,7 +8,8 @@ body {
   background-color: black;
   color: white;
   font-size: 20px;
-  font-family: 'Courier New', Courier, monospace; }
+  font-family: 'Courier New', Courier, monospace;
+  cursor: url("../images/cursor.png"), default; }
 
 a {
   color: white;
@@ -83,6 +84,32 @@ main {
     top: -40px;
     left: -145px;
     animation: imageHover 0.5s; }
+
+.menuDiv {
+  width: 1244px;
+  height: 602px;
+  transform: skew(-13deg);
+  background: black;
+  position: absolute;
+  z-index: 6;
+  animation: displayDivMenu 0.5s;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .menuDiv__recue {
+    color: #1B791C;
+    border: solid 2px #1B791C;
+    padding: 14px 29px; }
+    .menuDiv__recue:hover {
+      background-color: #1B791C;
+      color: black; }
+  .menuDiv__about {
+    color: #1B791C;
+    margin-top: 20px; }
+
+.displayMenu {
+  display: flex; }
 
 /*
 ABOUT
