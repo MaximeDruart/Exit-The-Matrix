@@ -53,24 +53,29 @@ main {
 
 .extracts-section {
   width: 1388px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 79px; }
 
-.extracts-section__scene {
-  width: 416px;
-  height: 602px;
-  position: relative; }
-
-.extracts-section__scene__shaderDiv {
-  position: absolute;
-  left: 130px;
-  top: 48px;
+.extracts-section__shadowDiv {
+  z-index: 3;
+  position: relative;
   height: 611px;
   width: 151px;
-  z-index: -1;
-  -webkit-transform: skew(-20deg);
-  -moz-transform: skew(-20deg);
-  transform: skew(-43deg) rotate(-32deg);
-  box-shadow: 0px 0px 120px 50px rgba(81, 220, 48, 0.3); }
+  width: 197px;
+  height: 602px;
+  transform: skew(-13deg);
+  box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3);
+  margin: 0 25px; }
+
+.extracts-section__sceneImage {
+  width: 416px;
+  height: 602px;
+  position: absolute;
+  z-index: 4;
+  transform: skew(17deg);
+  left: -98px; }
 
 /*
 ABOUT

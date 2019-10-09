@@ -61,7 +61,7 @@ setInterval(drawCanvas(), 10000);
 */
 
 const font_size = 20
-const textColor = '#38AE3F'
+const textColor = '#09550B'
 var c = document.querySelector('.matrix-canvas')
 var ctx = c.getContext("2d")
 
