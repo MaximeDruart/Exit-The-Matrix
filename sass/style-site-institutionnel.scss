@@ -5,12 +5,18 @@ $greenColor: '#38AE3F';
     src: url("../fonts/matrix.ttf");
 }
 
+@font-face {
+    font-family: "Courier";
+    src: url("../fonts/courier_[fr.allfont.net].ttf");
+}
+
 body {
     background-color: black;
     color: white;
     font-size: 20px;
-    top: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 a {
     color: white;
     text-decoration: none;
@@ -64,6 +70,7 @@ main{
 }
 
 .main__about{
+    font-family: 'Courier';
     padding: 10px;
     position: relative;
     max-width: 1024px;
@@ -73,8 +80,12 @@ main{
     border: 1px solid black;
     border-left-width: 0px;
     border-right-width: 0px;
-    top: 200px;
+    top: 100px;
     margin: 0 auto;
+}
+
+.main__about p {
+    font-size: 15px;
 }
 
 .main__flex{
@@ -145,6 +156,8 @@ div[class^="about_"] ul li{
 
 .about__production{
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .about__last{
@@ -158,12 +171,11 @@ div[class^="about_"] ul li{
     flex-direction: column;
     z-index: 10;
     left: 20px;
-    top: 35%;
+    top: 30%;
 }
 
 .social a{
-    margin-top: 50px;
-    margin: 20px auto;
+    margin: 30px auto;
     cursor: pointer;
 }
 
@@ -172,7 +184,7 @@ div[class^="about_"] ul li{
     border: 1px #ffffff solid;
     width: 40px;
     transform: rotate(90deg);
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .social::after{
@@ -180,5 +192,5 @@ div[class^="about_"] ul li{
     border: 1px #ffffff solid;
     width: 40px;
     transform: rotate(90deg);
-    margin-top: 50px;
+    margin-top: 60px;
 }
