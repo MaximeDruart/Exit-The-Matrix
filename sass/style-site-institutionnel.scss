@@ -156,7 +156,7 @@ ABOUT
 .main__about {
     font-family: 'Courier';
     background: black;
-    width: 1388px;
+    width: 1388px; /* Pour les 13 pouces 1100px a peu près c'est bon */
     margin: 0 auto;
     margin-top: 79px;
     transform: skew(-13deg);
@@ -266,4 +266,19 @@ div[class^="about_"] ul li{
         top: -40px;
         left: -145px;
     }
+}
+
+/* AUDIO CONTROL */
+
+.sound__control{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mute{
+    background: black;
+    border-radius: 50%;
+    padding: 15px;
+    width: 25px;
 }
