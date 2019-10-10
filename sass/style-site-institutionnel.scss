@@ -15,6 +15,7 @@ body {
     color: white;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;
 
     cursor: url('../images/cursor.png'), default;
 }
@@ -398,3 +399,29 @@ div[class^="about_"] ul li{
     width: 25px;
 }
 
+
+/*
+RESPONSIVE
+*/
+@media screen and (max-width: 1600px) {
+
+    header {
+        width: 1010px;
+    }
+    .extracts-section {
+        width: 1010px;
+    }
+    
+    .extracts-section__shadowDiv {
+        width: 75px;
+        height: 475px;
+        margin: 0px 55px;
+    }
+
+    .extracts-section__sceneImage {
+        width: 306px;
+        height: 482px;
+        left: -158px;
+    }
+
+}
