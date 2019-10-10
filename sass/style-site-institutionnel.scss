@@ -434,7 +434,7 @@ RESPONSIVE
         height: 280px;
         overflow: scroll;
     }
-    
+
     .playerDiv__close {
         right: -23px;
         top: 11px;
@@ -445,6 +445,12 @@ RESPONSIVE
         margin-left: -44px;
     }
 
+    .menuDiv {
+        width: 924px;
+        left: 0px;
+        height: 482px;
+        transform: skew(-11deg);
+    }
 }
 /*
 RESPONSIVE
