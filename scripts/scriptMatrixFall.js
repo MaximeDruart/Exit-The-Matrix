@@ -58,5 +58,3 @@ function draw()
 
 setInterval(draw, 40)
 
-
-
