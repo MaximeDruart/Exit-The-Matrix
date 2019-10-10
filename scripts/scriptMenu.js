@@ -6,6 +6,8 @@ const menuDiv = document.querySelector('.menuDiv')
 const buttonOpenMenu = document.querySelector('.header--ButtonMenu')
 //Variable of displaying of the menu
 let menuDisplayed = false;
+//Selector of the images of extracts
+const extractImages = document.querySelectorAll('.extracts-section__sceneImage')
 
 buttonOpenMenu.addEventListener('click', function(){
     
@@ -16,11 +18,17 @@ buttonOpenMenu.addEventListener('click', function(){
         menuDiv.classList.remove('displayMenu')
         menuDisplayed = false
 
+        //display extacts images of movies
+        displaySceneImages()
+
     } else {
         
         //Adding the class displayMenu to the Div menu to display the Menu 
         menuDiv.classList.add('displayMenu')
         menuDisplayed = true
+
+        //Hidding Images of extracts to prevent bugs
+        hideSceneImages()
     }
 })
 
@@ -47,3 +55,19 @@ mute.addEventListener('click', function(){
         mute.setAttribute('src', 'images/volume.svg')
     }
 })
+
+//Fonction to hidde scene images
+function hideSceneImages() {
+    for (let i = 0; i < extractImages.length; i++) {
+
+        extractImages[i].style.display = 'none'
+    }
+}
+
+//Fonction to display scene images
+function displaySceneImages() {
+    for (let i = 0; i < extractImages.length; i++) {
+    
+        extractImages[i].style.display = 'block'
+    }
+}

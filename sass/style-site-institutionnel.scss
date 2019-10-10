@@ -173,7 +173,8 @@ main{
             width: 480px;
             height: 680px;
             z-index: 5;
-            left: -145px;    
+            left: -145px;
+            top: -37px;
         }
     }
 }
@@ -225,6 +226,7 @@ main{
 
 .displayMenu {
     display: flex;
+    
 }
 
 
