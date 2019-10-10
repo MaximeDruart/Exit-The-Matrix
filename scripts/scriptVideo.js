@@ -5,6 +5,7 @@ const closeButton = document.querySelector('.playerDiv__close')
 let playingVideo = false
 let playerDivDisplayed = false
 const videoSource = document.querySelector('.playerDiv__video>source')
+const playerAudio = document.querySelector('audio')
 
 for (let i = 0; i < extracts.length; i++) {
     
@@ -17,7 +18,8 @@ for (let i = 0; i < extracts.length; i++) {
         
         video.play()
         playingVideo = true
-                  
+        
+        playerAudio.pause()
     })
 }
 
@@ -40,6 +42,8 @@ closeButton.addEventListener('click', function(){
     
     playerDiv.classList.remove('displayPlayerDiv')
     playerDivDisplayed = true
+    video.pause()
+    playerAudio.play()
 })
 
 function loadVideo(number){

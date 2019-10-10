@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="enfr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/style-site-institutionnel.css">
-    <title>À propos</title>
+    <title>Matrix | The movie | About</title>
 </head>
 <body>
     <canvas class="matrix-canvas">
@@ -18,19 +18,27 @@
         </header> <!--Header end-->
         <main>
             <div class="social">
-                <a><img src="images/fb.svg" alt=facebook"></a>
+                <a><img src="images/fb.svg" alt="facebook"></a>
                 <a><img src="images/twitter.svg" alt="twitter"></a>
                 <a><img src="images/insta.svg" alt="instagram"></a>
             </div>
             <div class="main__about">
+                <!-- Menu div start -->
+                 <div class="menuDiv menuAbout">
+                    <a href="movie-scenes.html" title="Sauver Neo" class="menuDiv__recue ">Rescue Neo</a>
+                    <a href="about.html" title="En savoir plus" class="menuDiv__about">Learn more</a>
+                    <a href="cookies.html" title="Mentions légales" class="menuDiv__cookies">Legal notice</a>
+                </div> <!-- Menu div end -->
                 <div class="main__flex">
                     <div class="about__synopsis">
-                        <h3>Titre du sinopsis</h3>
-                        <span class="text__typing"></span>
-                        <span class="text__cursor">|</span>
+                        <h3>Sinopsis</h3>
+                        <p>
+                            <span class="text__typing"></span>
+                            <span class="text__cursor">|</span>
+                        </p>
                     </div>
                     <div class="about__production">
-                        <h3>Produit par</h3>
+                        <h3>Produced by</h3>
                         <p>Les Wachowski</p>
                         <img src="images/warner-bros-logo-png-image-warner-bros-logo-png-dexter-s-laboratory-wiki-fandom-powered-by-wikia-573 2.svg" alt="">
                         <img src="images/Village-Roadshow-Pictures-Logo 2.svg" alt="">
@@ -62,8 +70,6 @@
     <script src="scripts/scriptMatrixFall.js"></script>
     <!-- Script of the menu -->
     <script src="scripts/scriptMenu.js"></script>
-    <!-- Script of the video player -->
-    <script src="scripts/scriptVideo.js"></script>
     <script src="scripts/typing.js"></script>
 </body>
 </html>

@@ -15,6 +15,7 @@ body {
     color: white;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;
 
     cursor: url('../images/cursor.png'), default;
 }
@@ -143,35 +144,35 @@ main{
     justify-content: center;
     margin-top: 79px;
     position: relative;
-}
 
-.extracts-section__shadowDiv{
-    z-index: 3;
-    position: relative;
-    height: 611px;
-    width: 151px;
-    width: 197px;
-    height: 602px;
-    transform: skew(-13deg);
-    box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3);
-    margin: 0 25px;
-}
+    &__shadowDiv{
+        z-index: 3;
+        position: relative;
+        height: 611px;
+        width: 151px;
+        width: 197px;
+        height: 602px;
+        transform: skew(-13deg);
+        box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3);
+        margin: 0 25px;
+    }
 
-.extracts-section__sceneImage {
-    width: 416px;
-    height: 602px;
-    position: absolute;
-    z-index: 4;
-    transform: skew(17deg);
-    left: -98px;
-    
-    &:hover {
-        width: 480px;
-        height: 680px;
-        z-index: 5;
-        top: -40px;
-        left: -145px;
-        animation: imageHover 0.5s;
+    &__sceneImage {
+        width: 416px;
+        height: 602px;
+        position: absolute;
+        z-index: 4;
+        transform: skew(17deg);
+        left: -98px;
+        
+        &:hover {
+            width: 480px;
+            height: 680px;
+            z-index: 5;
+            top: -40px;
+            left: -145px;
+            animation: imageHover 0.5s;
+        }
     }
 }
 
@@ -205,6 +206,19 @@ main{
         margin-top: 20px;
         font-size: 1.3em;
     }
+
+    &__cookies {
+        color: #1B791C;
+        margin-top: 20px;
+        font-size: 1em;
+        margin-left: 10px;
+    }
+}
+
+.menuAbout{
+    left: 25px !important;
+    height: 472px !important;
+    transform: none !important;
 }
 
 .displayMenu {
@@ -392,9 +406,146 @@ div[class^="about_"] ul li{
 }
 
 .mute{
-    background: white;
-    border-radius: 50%;
     padding: 15px;
     width: 25px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(205deg) brightness(101%) contrast(104%);
+
+    &:hover{
+        filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%);
+        transition: .3s;
+        cursor: pointer;
+    }
 }
 
+/*
+RESPONSIVE
+*/
+@media screen and (max-width: 1600px) {
+
+    header {
+        width: 1010px;
+    }
+    .extracts-section {
+        width: 1010px;
+    }
+    
+    .extracts-section__shadowDiv {
+        width: 75px;
+        height: 475px;
+        margin: 0px 55px;
+    }
+
+    .extracts-section__sceneImage {
+        width: 306px;
+        height: 482px;
+        left: -158px;
+    }
+
+    .main__about{
+        width: 1010px;
+    }
+
+    .about__synopsis{
+        height: 300px
+    }
+
+    .about__synopsis p {
+        height: 280px;
+        overflow: scroll;
+    }
+
+    .playerDiv__close {
+        right: -23px;
+        top: 11px;
+    }
+
+    .playerDiv__video {
+        width: 1095px;
+        margin-left: -44px;
+    }
+
+    .playerDiv {
+        top: -130px;
+    }
+
+    .menuDiv {
+        width: 924px;
+        left: 0px;
+        height: 482px;
+        transform: skew(-11deg);
+    }
+}
+/*
+RESPONSIVE
+*/
+@media screen and (max-width: 1220px) {
+
+    header {
+        width: 740px;
+    }
+    .extracts-section {
+        width: 740px;
+    }
+    
+    .extracts-section__shadowDiv {
+        width: 11px;
+        height: 387px;
+        margin: 0px 66px;
+    }
+
+    .extracts-section__sceneImage {
+        width: 232px;
+        height: 392px;
+        left: -130px;
+    }
+
+    .main__about{
+        width: 740px;
+    }
+
+    .about__synopsis{
+        height: 200px
+    }
+
+    .about__synopsis p {
+        height: 180px;
+        overflow: scroll;
+    }
+
+    div[class^="about_"]{
+        padding: 0;
+    }
+
+    .main__flex{
+        justify-content: end;
+    }
+
+    .about__last{
+        font-size: 20px;
+        padding: 10px 0 !important;
+    }
+
+    .about__synopsis p{
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width: 981px) {
+
+    header {
+        width: 470px;
+    }
+    .extracts-section {
+        width: 510px;
+        flex-wrap: wrap;
+    }
+    
+    .extracts-section__shadowDiv {
+        margin: 10px 66px;
+    }
+
+    .main__about{
+        width: 740px;
+    }
+}
