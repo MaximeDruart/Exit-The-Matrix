@@ -21,7 +21,6 @@ var mute = document.querySelector('.mute')
 var player = document.querySelector('audio')
 
 mute.addEventListener('click', function(){
-    console.log('ok')
     if(player.paused){
         player.play()
         mute.setAttribute('src', "images/mute.svg")
