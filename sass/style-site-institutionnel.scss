@@ -174,64 +174,30 @@ main{
 ABOUT
 */
 
-.main__about{
+.main__about {
     font-family: 'Courier';
-    padding: 10px;
-    position: relative;
-    height: 550px;
-    width: 850px;
     background: black;
-    border: 1px solid black;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    top: 100px;
+    width: 1388px;
     margin: 0 auto;
+    margin-top: 79px;
+    transform: skew(-13deg);
+    box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3);
+}
+
+.main__flex{
+    display: flex;
+    justify-content: center;
 }
 
 .main__about p {
     font-size: 15px;
 }
 
-.main__flex{
-    display: flex;
-}
-
-.main__about::before{
-    position: absolute;
-    content: '';
-    left: -16%;
-    top: -1px;
-    height: 100%;
-    width: 60%;
-    background: black;
-    border: 1px solid black;
-    z-index: -1;
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    transform: skew(-20deg);
-    box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.6);
-
-}
-.main__about::after{
-    position: absolute;
-    content: '';
-    left: 55%;
-    top: -1px;
-    height: 100%;
-    width: 60%;
-    background: black;
-    border: 1px solid black;
-    z-index: -1;
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    transform: skew(-20deg);
-    box-shadow: 0px 0px 76px rgba(39, 176, 40, 0.6);
-
-}
-
 div[class^="about_"]{
     color: #ffffff;
     padding: 20px;
+    margin: 10px 40px;
+    transform: skew(13deg);
 }
 
 div[class^="about_"] h3{
