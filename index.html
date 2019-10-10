@@ -34,7 +34,7 @@
       <div class="terminal">
         <div class="inputLine">
           <span class="prefix">[MATRIX]</span>
-          <input spellcheck="false" size=1 maxlength="40" type="text">
+          <input class="initialInput" spellcheck="false" size=1 maxlength="40" type="text">
           <span class="caret">&#9646;</span>
         </div>
       </div>
@@ -75,7 +75,7 @@
     function displayTerminal() {  
       document.querySelector(".containerIntro").style.display = "none"
       TweenMax.to(".container .terminal", 0.6, {opacity:1})
-      terminal.activeInput.focus()
+      document.querySelector(".initialInput").focus()
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>

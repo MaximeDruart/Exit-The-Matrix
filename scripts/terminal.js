@@ -19,16 +19,15 @@ class Terminal {
           "[b4]" : false
         }
         this.audios = {
-            "agent" : "../sounds/agent.mp3",
             "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
-            "agent": "../sounds/agent.mp3",
+            "brokenPhone": "../sounds/brokenPhone.mp3",
+            "camOff": "../sounds/cameraOffSound.mp3",
+            "canYouCall": "../sounds/canYouCall.mp3",
+            "dontUnderstand": "../sounds/dontUnderstand.mp3",
+            "help1": "../sounds/help1.mp3",
+            "help2": "../sounds/help2.mp3",
+            "heyTank": "../sounds/heyTank.mp3",
+            "iGotIt": "../sounds/iGotIt.mp3"
         }
         
         this.winPosition = false
