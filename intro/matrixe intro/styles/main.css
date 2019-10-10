@@ -33,6 +33,7 @@ body{
 .container_openOverlay>div.first{
   display: flex;
   flex-direction: column;
+  cursor: default;
 }
 
 .container_openOverlay>div.first>span.first{
@@ -41,7 +42,6 @@ body{
   /* text-shadow:  0 0 10px #00FF00; */
   font-size: 20px;
   font-family: url("../fonts/Terminus.ttf");
-  /* cursor: default; */
 }
 
 /* Button A */
