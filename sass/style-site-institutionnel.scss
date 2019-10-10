@@ -425,3 +425,29 @@ RESPONSIVE
     }
 
 }
+
+/*
+RESPONSIVE
+*/
+@media screen and (max-width: 1220px) {
+
+    header {
+        width: 740px;
+    }
+    .extracts-section {
+        width: 740px;
+    }
+    
+    .extracts-section__shadowDiv {
+        width: 11px;
+        height: 387px;
+        margin: 0px 66px;
+    }
+
+    .extracts-section__sceneImage {
+        width: 232px;
+        height: 392px;
+        left: -130px;
+    }
+
+}
