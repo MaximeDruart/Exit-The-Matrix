@@ -168,7 +168,7 @@ class Terminal {
                     this.write("Please specify a location.")
                     break;
 
-                case "/hide"
+                case "/hide":
                 case "/display":
                     this.write("Please specify an item.")
                     break;

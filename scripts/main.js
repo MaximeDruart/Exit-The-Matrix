@@ -390,6 +390,7 @@ let openOverlay = {
                 else if(opacity == 0){
                     setTimeout(function(){
                         openOverlay.stopInterval = true
+                        displayTerminal()
                     },5000)
                 }
             }
@@ -425,8 +426,13 @@ let openOverlay = {
         },50)
     },
 }
-window.onload = function(){
-    openOverlay.domCreation()
-    openOverlay.matrixTitleAnimation()
-    openOverlay.randNumberChange(openOverlay.domTabBox)
+
+if (window.location.href.lastIndexOf("#noanim") == -1 ) {
+    window.onload = function(){
+        openOverlay.domCreation()
+        openOverlay.matrixTitleAnimation()
+        openOverlay.randNumberChange(openOverlay.domTabBox)
+    }
+} else {
+    displayTerminal()
 }
