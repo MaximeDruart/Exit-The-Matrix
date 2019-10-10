@@ -1,17 +1,17 @@
-const menu = document.querySelector('.menuDiv')
+const menuDiv = document.querySelector('.menuDiv')
 const buttonOpenMenu = document.querySelector('.header--ButtonMenu')
 let menuDisplayed = false;
 
 buttonOpenMenu.addEventListener('click', function(){
     if (menuDisplayed) {
         
-        menu.classList.remove('displayMenu')
+        menuDiv.classList.remove('displayMenu')
         menuDisplayed = false
 
     } else {
         
 
-        menu.classList.add('displayMenu')
+        menuDiv.classList.add('displayMenu')
         menuDisplayed = true
     }
 })
