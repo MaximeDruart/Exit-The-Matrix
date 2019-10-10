@@ -2,6 +2,7 @@ body{
   margin:0;
   padding:0;
   background: black;
+  position: relative;
 }
 
 @font-face {
@@ -100,3 +101,38 @@ body{
   background: black;
   opacity: 0;
 }
+
+/* Finish Overlay */
+
+.finichOverlay{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+.finichOverlay_win{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.finichOverlay_win div{
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.finichOverlay_win div a{ 
+  text-decoration: none;
+  font-size: 50px;
+  color: #5DFC86;
+  text-shadow:  1px 1px 10px #5DFC86;
+  letter-spacing: 5px;
+}
+
