@@ -164,14 +164,16 @@ main{
         z-index: 4;
         transform: skew(17deg);
         left: -98px;
-        
+
+        transition-property: width, height, z-index, left;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+
         &:hover {
             width: 480px;
             height: 680px;
             z-index: 5;
-            top: -40px;
-            left: -145px;
-            animation: imageHover 0.5s;
+            left: -145px;    
         }
     }
 }
@@ -362,20 +364,20 @@ div[class^="about_"] ul li{
 .social::before{
     content: '';
     border: 1px #ffffff solid;
-    width: 40px;
+    width: 110px;
     transform: rotate(90deg);
     margin-bottom: 60px;
-    margin-left: 132px;
+    margin-left: 95px;
     z-index: 7;
 }
 
 .social::after{
     content: '';
     border: 1px #ffffff solid;
-    width: 40px;
+    width: 110px;
     transform: rotate(90deg);
     margin-top: 60px;
-    margin-left: 132px;
+    margin-left: 95px;
 }
 
 @keyframes imageHover {
@@ -439,6 +441,15 @@ RESPONSIVE
         width: 306px;
         height: 482px;
         left: -158px;
+        z-index: 4;
+
+        &:hover {
+            z-index: 5;
+            width: 350px;
+            height: 530px;
+            left: -197px;
+        
+        }
     }
 
     .main__about{
@@ -474,6 +485,26 @@ RESPONSIVE
         height: 482px;
         transform: skew(-11deg);
     }
+
+    .social {
+        left: -60px;
+        top: 241px;
+
+        &::before {
+            width: 70px;
+            margin-left: 115px;
+        }
+
+        &::after {
+            width: 70px;
+            margin-left: 115px;
+        }
+    }
+
+    
+
+
+
 }
 /*
 RESPONSIVE
@@ -529,6 +560,20 @@ RESPONSIVE
         height: 250px;
     }
 
+    .menuDiv {
+        width: 706px;
+        left: -4px;
+        height: 396px;
+        transform: skew(-11deg);
+    }
+
+    .playerDiv__video {
+        width: 879px;
+    }
+
+    .playerDiv {
+        top: -70px;
+    }
 }
 
 @media screen and (max-width: 981px) {
@@ -547,5 +592,24 @@ RESPONSIVE
 
     .main__about{
         width: 740px;
+    }
+
+    .social {
+        left: 7px;
+        top: 254px;
+
+        &::before {
+            width: 60px;
+            margin-left: 11px;
+        }
+
+        &::after {
+            width: 60px;
+            margin-left: 7px;
+        }
+
+        a {
+            margin: 13px auto;
+        }
     }
 }
