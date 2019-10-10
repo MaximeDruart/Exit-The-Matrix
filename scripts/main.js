@@ -33,6 +33,7 @@ let openOverlay = {
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0],
@@ -44,7 +45,6 @@ let openOverlay = {
                         [0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -55,7 +55,6 @@ let openOverlay = {
                         [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -67,21 +66,22 @@ let openOverlay = {
                         [0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0],
-                        [0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0],
+                        [0,0,0,0,0,0,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -115,13 +115,13 @@ let openOverlay = {
 
         // The matrix background DOM
 
-        let container = document.querySelector(".container_openOverlay")
-        let buttonsContainerA = document.querySelector(".container_openOverlay_buttonsA")
-        let buttonsContainerB = document.querySelector(".container_openOverlay_buttonsB")
+        let containerIntro = document.querySelector(".containerIntro_openOverlay")
+        let buttonsContainerIntroA = document.querySelector(".containerIntro_openOverlay_buttonsA")
+        let buttonsContainerIntroB = document.querySelector(".containerIntro_openOverlay_buttonsB")
         for(let i = 0 ; i < openOverlay.width ; i++){
             let div = document.createElement('div')
             div.setAttribute('class','first')
-            container.appendChild(div)
+            containerIntro.appendChild(div)
             let tab = []
             openOverlay.domTab.push(tab)
             for (let j = 0; j < openOverlay.height; j++) {
@@ -138,7 +138,7 @@ let openOverlay = {
         for(let i = 0 ; i < 147 ; i++){
             let span = document.createElement('span')
             span.setAttribute('class','second')
-            buttonsContainerA.appendChild(span)
+            buttonsContainerIntroA.appendChild(span)
             openOverlay.buttonsDomTabA.push(span)
         }
 
@@ -147,7 +147,7 @@ let openOverlay = {
         for(let i = 0 ; i < 57 ; i++){
             let span = document.createElement('span')
             span.setAttribute('class','third')
-            buttonsContainerB.appendChild(span)
+            buttonsContainerIntroB.appendChild(span)
             openOverlay.buttonsDomTabB.push(span)
         }
     },
@@ -276,8 +276,8 @@ let openOverlay = {
                     
                     // Allowing click and the two buttons after their displaying
 
-                    document.querySelector(".container_openOverlay_buttonsA").style.pointerEvents = "auto"
-                    document.querySelector(".container_openOverlay_buttonsB").style.pointerEvents = "auto"
+                    document.querySelector(".containerIntro_openOverlay_buttonsA").style.pointerEvents = "auto"
+                    document.querySelector(".containerIntro_openOverlay_buttonsB").style.pointerEvents = "auto"
                     clearInterval(letterCellsTabDisplay)
                 }
             },50)
@@ -285,7 +285,7 @@ let openOverlay = {
 
         // Setting the click event of the first button (which lead to the end of the introduction and the beginning of the game)
 
-        document.querySelector(".container_openOverlay_buttonsA").addEventListener('click', function(){
+        document.querySelector(".containerIntro_openOverlay_buttonsA").addEventListener('click', function(){
 
             // Make the background matrix disappear
 
