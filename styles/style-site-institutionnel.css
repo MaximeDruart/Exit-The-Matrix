@@ -125,6 +125,17 @@ main {
   .playerDiv__video {
     width: 1355px;
     margin-left: 29px; }
+  .playerDiv__close {
+    width: 14px;
+    height: 18px;
+    background-image: url(../images/close.svg);
+    filter: brightness(0) invert(1);
+    background-size: cover;
+    position: absolute;
+    right: 22px;
+    top: 12px; }
+    .playerDiv__close:hover {
+      filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%); }
 
 .displayPlayerDiv {
   display: block; }
