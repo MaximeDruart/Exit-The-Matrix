@@ -1,36 +1,514 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Matrix";
+  src: url("../fonts/matrix.ttf"); }
+@font-face {
+  font-family: "Courier";
+  src: url("../fonts/courier_[fr.allfont.net].ttf"); }
+body {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  cursor: url("../images/cursor.png"), default; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+.matrix-canvas {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1; }
+
+.main-container {
+  position: relative;
+  top: 0%;
+  z-index: 2; }
+
+header {
+  width: 1398px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px; }
+  header .header--Mainlogo {
+    font-family: 'Matrix';
+    font-size: 3.15em;
+    font-weight: 500;
+    margin: 0; }
+  header .header--ButtonMenu {
+    width: 23px;
+    height: 23px;
+    background-image: url("../images/buttonMenu.svg");
+    filter: brightness(0) invert(1);
+    background-size: cover;
+    display: inline-block;
+    margin-top: 20px; }
+    header .header--ButtonMenu:hover {
+      filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%); }
+
+/*Glitch */
+.matrix {
+  position: relative;
+  color: white;
+  animation: glitch-skew 1s infinite linear alternate-reverse; }
+  .matrix::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: 2px;
+    text-shadow: -2px 0 #1B791C;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse; }
+  .matrix::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: -2px;
+    text-shadow: -2px 0 #000000, 2px 2px #1B791C;
+    animation: glitch-anim2 1s infinite linear alternate-reverse; }
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(42px, 9999px, 92px, 0);
+    transform: skew(0.7deg); }
+  5% {
+    clip: rect(22px, 9999px, 32px, 0);
+    transform: skew(0.58deg); }
+  10% {
+    clip: rect(1px, 9999px, 26px, 0);
+    transform: skew(0.78deg); }
+  15% {
+    clip: rect(75px, 9999px, 83px, 0);
+    transform: skew(0.93deg); }
+  20% {
+    clip: rect(54px, 9999px, 48px, 0);
+    transform: skew(0.63deg); }
+  25% {
+    clip: rect(91px, 9999px, 94px, 0);
+    transform: skew(0.58deg); }
+  30% {
+    clip: rect(59px, 9999px, 78px, 0);
+    transform: skew(0.26deg); }
+  35% {
+    clip: rect(74px, 9999px, 26px, 0);
+    transform: skew(0.53deg); }
+  40% {
+    clip: rect(64px, 9999px, 93px, 0);
+    transform: skew(0.43deg); }
+  45% {
+    clip: rect(96px, 9999px, 40px, 0);
+    transform: skew(0.88deg); }
+  50% {
+    clip: rect(99px, 9999px, 42px, 0);
+    transform: skew(0.88deg); }
+  55% {
+    clip: rect(77px, 9999px, 50px, 0);
+    transform: skew(0.81deg); }
+  60% {
+    clip: rect(27px, 9999px, 27px, 0);
+    transform: skew(0.88deg); }
+  65% {
+    clip: rect(25px, 9999px, 100px, 0);
+    transform: skew(0.21deg); }
+  70% {
+    clip: rect(59px, 9999px, 20px, 0);
+    transform: skew(0.78deg); }
+  75% {
+    clip: rect(81px, 9999px, 60px, 0);
+    transform: skew(0.75deg); }
+  80% {
+    clip: rect(76px, 9999px, 59px, 0);
+    transform: skew(0.62deg); }
+  85% {
+    clip: rect(83px, 9999px, 8px, 0);
+    transform: skew(0.05deg); }
+  90% {
+    clip: rect(15px, 9999px, 90px, 0);
+    transform: skew(0.43deg); }
+  95% {
+    clip: rect(51px, 9999px, 54px, 0);
+    transform: skew(0.41deg); }
+  100% {
+    clip: rect(25px, 9999px, 35px, 0);
+    transform: skew(0.29deg); } }
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(5px, 9999px, 97px, 0);
+    transform: skew(0.3deg); }
+  5% {
+    clip: rect(46px, 9999px, 39px, 0);
+    transform: skew(0.63deg); }
+  10% {
+    clip: rect(88px, 9999px, 84px, 0);
+    transform: skew(0.78deg); }
+  15% {
+    clip: rect(38px, 9999px, 82px, 0);
+    transform: skew(0.41deg); }
+  20% {
+    clip: rect(33px, 9999px, 31px, 0);
+    transform: skew(0.82deg); }
+  25% {
+    clip: rect(77px, 9999px, 63px, 0);
+    transform: skew(0.03deg); }
+  30% {
+    clip: rect(24px, 9999px, 54px, 0);
+    transform: skew(0.49deg); }
+  35% {
+    clip: rect(90px, 9999px, 14px, 0);
+    transform: skew(0.41deg); }
+  40% {
+    clip: rect(98px, 9999px, 39px, 0);
+    transform: skew(0.41deg); }
+  45% {
+    clip: rect(40px, 9999px, 41px, 0);
+    transform: skew(0.18deg); }
+  50% {
+    clip: rect(33px, 9999px, 89px, 0);
+    transform: skew(0.92deg); }
+  55% {
+    clip: rect(21px, 9999px, 27px, 0);
+    transform: skew(0.95deg); }
+  60% {
+    clip: rect(50px, 9999px, 63px, 0);
+    transform: skew(0.72deg); }
+  65% {
+    clip: rect(44px, 9999px, 62px, 0);
+    transform: skew(0.46deg); }
+  70% {
+    clip: rect(28px, 9999px, 32px, 0);
+    transform: skew(0.63deg); }
+  75% {
+    clip: rect(89px, 9999px, 79px, 0);
+    transform: skew(0.74deg); }
+  80% {
+    clip: rect(29px, 9999px, 45px, 0);
+    transform: skew(0.7deg); }
+  85% {
+    clip: rect(58px, 9999px, 82px, 0);
+    transform: skew(0.44deg); }
+  90% {
+    clip: rect(6px, 9999px, 54px, 0);
+    transform: skew(0.94deg); }
+  95% {
+    clip: rect(63px, 9999px, 37px, 0);
+    transform: skew(0.08deg); }
+  100% {
+    clip: rect(41px, 9999px, 9px, 0);
+    transform: skew(0.4deg); } }
+@keyframes glitch-skew {
+  0% {
+    transform: skew(4deg); }
+  10% {
+    transform: skew(1deg); }
+  20% {
+    transform: skew(-3deg); }
+  30% {
+    transform: skew(1deg); }
+  40% {
+    transform: skew(5deg); }
+  50% {
+    transform: skew(-4deg); }
+  60% {
+    transform: skew(1deg); }
+  70% {
+    transform: skew(-1deg); }
+  80% {
+    transform: skew(5deg); }
+  90% {
+    transform: skew(-3deg); }
+  100% {
+    transform: skew(4deg); } }
+main {
+  width: 100%; }
+
+.extracts-section {
+  width: 1388px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 79px;
+  position: relative; }
+  .extracts-section__shadowDiv {
+    z-index: 3;
+    position: relative;
+    height: 611px;
+    width: 151px;
+    width: 197px;
+    height: 602px;
+    transform: skew(-13deg);
+    box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3);
+    margin: 0 25px; }
+  .extracts-section__sceneImage {
+    width: 416px;
+    height: 602px;
+    position: absolute;
+    z-index: 4;
+    transform: skew(17deg);
+    left: -98px; }
+    .extracts-section__sceneImage:hover {
+      width: 480px;
+      height: 680px;
+      z-index: 5;
+      top: -40px;
+      left: -145px;
+      animation: imageHover 0.5s; }
+
+.menuDiv {
+  width: 1244px;
+  height: 602px;
+  transform: skew(-13deg);
+  background: black;
+  position: absolute;
+  z-index: 6;
+  animation: displayDivMenu 0.5s;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .menuDiv__recue {
+    color: #1B791C;
+    border: solid 2px #1B791C;
+    padding: 14px 29px;
+    font-size: 1.6em; }
+    .menuDiv__recue:hover {
+      background-color: #1B791C;
+      color: black; }
+  .menuDiv__about {
+    color: #1B791C;
+    margin-top: 20px;
+    font-size: 1.3em; }
+
+.displayMenu {
+  display: flex; }
+
+.playerDiv {
+  top: -40px;
+  z-index: 6;
+  width: 100%;
+  height: 740px;
+  position: absolute;
+  display: none; }
+  .playerDiv__video {
+    width: 1355px;
+    margin-left: 29px; }
+  .playerDiv__close {
+    width: 14px;
+    height: 18px;
+    background-image: url(../images/close.svg);
+    filter: brightness(0) invert(1);
+    background-size: cover;
+    position: absolute;
+    right: 22px;
+    top: 12px; }
+    .playerDiv__close:hover {
+      filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%); }
+
+.displayPlayerDiv {
+  display: block; }
+
 /*
-Error: Invalid CSS after "    }": expected selector or at-rule, was "}"
-        on line 450 of /Users/Hugo/Desktop/Dvpt Web/Projet3T/Git/si-film/sass/style-site-institutionnel.scss
-
-445: 
-446:     .playerDiv__video {
-447:         width: 1095px;
-448:         margin-left: -44px;
-449:     }
-450: }
-451: 
-452: @media screen and (max-width: 1220px) {
-453: 
-454:     header {
-455:         width: 740px;
-
-Backtrace:
-/Users/Hugo/Desktop/Dvpt Web/Projet3T/Git/si-film/sass/style-site-institutionnel.scss:450
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:42:in `parse'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `load'
-/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `<main>'
+ABOUT
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    }\": expected selector or at-rule, was \"}\"\A         on line 450 of /Users/Hugo/Desktop/Dvpt Web/Projet3T/Git/si-film/sass/style-site-institutionnel.scss\A \A 445: \A 446:     .playerDiv__video {\A 447:         width: 1095px;\A 448:         margin-left: -44px;\A 449:     }\A 450: }\A 451: \A 452: @media screen and (max-width: 1220px) {\A 453: \A 454:     header {\A 455:         width: 740px;"; }
+.main__about {
+  font-family: 'Courier';
+  background: black;
+  width: 1388px;
+  /* Pour les 13 pouces 1100px a peu près c'est bon */
+  margin: 0 auto;
+  margin-top: 79px;
+  transform: skew(-13deg);
+  box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3); }
+
+.main__flex {
+  display: flex;
+  justify-content: center; }
+
+.main__about p {
+  font-size: 15px; }
+
+div[class^="about_"] {
+  color: #ffffff;
+  padding: 20px;
+  margin: 10px 40px;
+  transform: skew(13deg); }
+
+div[class^="about_"] h3 {
+  color: #1B791C; }
+
+div[class^="about_"] img {
+  margin-top: 30px; }
+
+div[class^="about_"] ul {
+  list-style: none;
+  width: max-content;
+  padding: 0;
+  margin: 0; }
+
+div[class^="about_"] ul li {
+  margin-top: 15px; }
+
+.text__typing {
+  max-width: 400px;
+  min-width: 300px;
+  font-size: 15px; }
+
+.text__cursor {
+  opacity: 1;
+  animation: cursor 0.4s  infinite;
+  -webkit-animation: cursor 0.4s infinite; }
+
+@keyframes cursor {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.about__production {
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+
+.about__last {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 79px; }
+
+.social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  left: -2%;
+  top: 30%; }
+
+.social a {
+  margin: 30px auto;
+  margin-left: 141px;
+  cursor: pointer; }
+  .social a:hover {
+    filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%);
+    transition: .3s; }
+
+.social::before {
+  content: '';
+  border: 1px #ffffff solid;
+  width: 40px;
+  transform: rotate(90deg);
+  margin-bottom: 60px;
+  margin-left: 132px;
+  z-index: 7; }
+
+.social::after {
+  content: '';
+  border: 1px #ffffff solid;
+  width: 40px;
+  transform: rotate(90deg);
+  margin-top: 60px;
+  margin-left: 132px; }
+
+@keyframes imageHover {
+  from {
+    width: 416px;
+    height: 602px;
+    z-index: 4;
+    left: -98px; }
+  to {
+    width: 480px;
+    height: 680px;
+    z-index: 5;
+    top: -40px;
+    left: -145px; } }
+/* AUDIO CONTROL */
+.sound__control {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
+
+.mute {
+  padding: 15px;
+  width: 25px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(205deg) brightness(101%) contrast(104%); }
+
+/*
+RESPONSIVE
+*/
+@media screen and (max-width: 1600px) {
+  header {
+    width: 1010px; }
+
+  .extracts-section {
+    width: 1010px; }
+
+  .extracts-section__shadowDiv {
+    width: 75px;
+    height: 475px;
+    margin: 0px 55px; }
+
+  .extracts-section__sceneImage {
+    width: 306px;
+    height: 482px;
+    left: -158px; }
+
+  .main__about {
+    width: 1010px; }
+
+  .about__synopsis {
+    height: 300px; }
+
+  .about__synopsis p {
+    height: 280px;
+    overflow: scroll; } }
+/*
+RESPONSIVE
+*/
+.playerDiv__close {
+  right: -23px;
+  top: 11px; }
+
+.playerDiv__video {
+  width: 1095px;
+  margin-left: -44px; }
+
+@media screen and (max-width: 1220px) {
+  header {
+    width: 740px; }
+
+  .extracts-section {
+    width: 740px; }
+
+  .extracts-section__shadowDiv {
+    width: 11px;
+    height: 387px;
+    margin: 0px 66px; }
+
+  .extracts-section__sceneImage {
+    width: 232px;
+    height: 392px;
+    left: -130px; } }
+@media screen and (max-width: 981px) {
+  header {
+    width: 470px; }
+
+  .extracts-section {
+    width: 510px;
+    flex-wrap: wrap; }
+
+  .extracts-section__shadowDiv {
+    margin: 10px 66px; }
+
+  .main__about {
+    width: 740px; } }
+
+/*# sourceMappingURL=style-site-institutionnel.css.map */
