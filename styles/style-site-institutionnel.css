@@ -100,13 +100,15 @@ main {
   .menuDiv__recue {
     color: #1B791C;
     border: solid 2px #1B791C;
-    padding: 14px 29px; }
+    padding: 14px 29px;
+    font-size: 1.6em; }
     .menuDiv__recue:hover {
       background-color: #1B791C;
       color: black; }
   .menuDiv__about {
     color: #1B791C;
-    margin-top: 20px; }
+    margin-top: 20px;
+    font-size: 1.3em; }
 
 .displayMenu {
   display: flex; }
