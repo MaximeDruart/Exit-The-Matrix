@@ -396,6 +396,12 @@ div[class^="about_"] ul li{
     padding: 15px;
     width: 25px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(205deg) brightness(101%) contrast(104%);
+
+    &:hover{
+        filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%);
+        transition: .3s;
+        cursor: pointer;
+    }
 }
 
 /*
@@ -445,6 +451,10 @@ RESPONSIVE
         margin-left: -44px;
     }
 
+    .playerDiv {
+        top: -130px;
+    }
+
 }
 /*
 RESPONSIVE
@@ -469,6 +479,37 @@ RESPONSIVE
         height: 392px;
         left: -130px;
     }
+
+    .main__about{
+        width: 740px;
+    }
+
+    .about__synopsis{
+        height: 200px
+    }
+
+    .about__synopsis p {
+        height: 180px;
+        overflow: scroll;
+    }
+
+    div[class^="about_"]{
+        padding: 0;
+    }
+
+    .main__flex{
+        justify-content: end;
+    }
+
+    .about__last{
+        font-size: 20px;
+        padding: 10px 0 !important;
+    }
+
+    .about__synopsis p{
+        height: 250px;
+    }
+
 }
 
 @media screen and (max-width: 981px) {
