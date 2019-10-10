@@ -1,7 +1,11 @@
+//Selector <div> of the menu 
 const menuDiv = document.querySelector('.menuDiv')
+// Selotor of the button
 const buttonOpenMenu = document.querySelector('.header--ButtonMenu')
+//Variable of displaying of the menu
 let menuDisplayed = false;
 
+/* PLAYER AUDIO */
 buttonOpenMenu.addEventListener('click', function(){
     if (menuDisplayed) {
         
@@ -15,18 +19,19 @@ buttonOpenMenu.addEventListener('click', function(){
         menuDisplayed = true
     }
 })
+
 /* PLAYER AUDIO */
 
-var mute = document.querySelector('.mute')
-var player = document.querySelector('audio')
+const mute = document.querySelector('.mute')
+const player = document.querySelector('audio')
 
 mute.addEventListener('click', function(){
     if(player.paused){
         player.play()
-        mute.setAttribute('src', "images/mute.svg")
+        mute.setAttribute('src', 'images/mute.svg')
     }
     else{
         player.pause()
-        mute.setAttribute('src', "images/volume.svg")
+        mute.setAttribute('src', 'images/volume.svg')
     }
 })
