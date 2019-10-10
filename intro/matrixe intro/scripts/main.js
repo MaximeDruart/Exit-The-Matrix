@@ -3,8 +3,10 @@ let openOverlay = {
     height : 22,
     domTab : [],
     domTabBox : [],
-    buttonsDomTab : [],
+    buttonsDomTabA : [],
+    buttonsDomTabB : [],
     stopInterval : false,
+    stopBinaryInterval : false,
     matrixMatrice : [   
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -91,8 +93,7 @@ let openOverlay = {
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                     ],
-
-    buttonsMatrice : [
+    buttonsMatriceA : [
                         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
                         1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,
                         1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,
@@ -101,10 +102,22 @@ let openOverlay = {
                         1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,
                         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
                     ],
+    buttonsMatriceB : [
+                        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+                        1,1,"A","c","c","é","d","e","r",1,"a","u",1,"s","i","t","e",1,1,
+                        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+                        
+                    ],
 
-    creation : function(){
+    // Creation of all the DOM
+
+    domCreation : function(){
+
+        // The matrix background DOM
+
         let container = document.querySelector(".container_openOverlay")
-        let buttonsContainer = document.querySelector(".container_openOverlay_buttons")
+        let buttonsContainerA = document.querySelector(".container_openOverlay_buttonsA")
+        let buttonsContainerB = document.querySelector(".container_openOverlay_buttonsB")
         for(let i = 0 ; i < openOverlay.width ; i++){
             let div = document.createElement('div')
             div.setAttribute('class','first')
@@ -120,16 +133,29 @@ let openOverlay = {
             }
         }
 
+        // The first button DOM
+
         for(let i = 0 ; i < 147 ; i++){
             let span = document.createElement('span')
             span.setAttribute('class','second')
-            buttonsContainer.appendChild(span)
-            openOverlay.buttonsDomTab.push(span)
+            buttonsContainerA.appendChild(span)
+            openOverlay.buttonsDomTabA.push(span)
         }
-        console.log(openOverlay.buttonsDomTab)
+
+        // The second button DOM
+        
+        for(let i = 0 ; i < 57 ; i++){
+            let span = document.createElement('span')
+            span.setAttribute('class','third')
+            buttonsContainerB.appendChild(span)
+            openOverlay.buttonsDomTabB.push(span)
+        }
     },
 
     matrixTitleAnimation : function(){
+
+        // Pushing all of the DOM spans that contruct the word "MATRIX" in an other tab
+
         let matrixSpanTab = []
         for (let i = 0; i < openOverlay.matrixMatrice.length; i++) {
             for (let j = 0; j < openOverlay.matrixMatrice[i].length; j++) {
@@ -139,6 +165,8 @@ let openOverlay = {
             }
             
         }
+
+        // Displaying the word "MATRIX" span by span with an interval
 
         setTimeout(function(){
             let x = 0
@@ -155,29 +183,48 @@ let openOverlay = {
                 }
             },1)
         },500)
-
     },
 
     buttonsAnimation : function(){
+
+        // Tabs of each kind of characters that construct the buttons
+
         let hiddenCellsTab = []
         let binaryCellsTab = []
         let letterCellsTab = []
+
+        // Tab of the contents of the spans that are letters
+
         let letterTab = []
-        for (let i = 0; i < openOverlay.buttonsMatrice.length; i++) {
-            if(openOverlay.buttonsMatrice[i] == 0){
+
+        // Filling the tabs with the help of the matrix A : "buttonsMatriceA"
+
+        for (let i = 0; i < openOverlay.buttonsMatriceA.length; i++) {
+            if(openOverlay.buttonsMatriceA[i] == 1){
+                hiddenCellsTab.push(openOverlay.buttonsDomTabA[i])
             }
-            else if(openOverlay.buttonsMatrice[i] == 1){
-                hiddenCellsTab.push(openOverlay.buttonsDomTab[i])
-            }
-            else if(openOverlay.buttonsMatrice[i] == 2){
-                binaryCellsTab.push(openOverlay.buttonsDomTab[i])
+            else if(openOverlay.buttonsMatriceA[i] == 2){
+                binaryCellsTab.push(openOverlay.buttonsDomTabA[i])
             }
             else{
-                letterCellsTab.push(openOverlay.buttonsDomTab[i])
-                letterTab.push(openOverlay.buttonsMatrice[i])
+                letterCellsTab.push(openOverlay.buttonsDomTabA[i])
+                letterTab.push(openOverlay.buttonsMatriceA[i])
             }
         }
-        console.log(hiddenCellsTab,binaryCellsTab,letterCellsTab,letterTab)
+
+        // Filling the tabs with the help of the matrix B : "buttonsMatriceB"
+
+        for (let i = 0; i < openOverlay.buttonsMatriceB.length; i++) {
+            if(openOverlay.buttonsMatriceB[i] == 1){
+                hiddenCellsTab.push(openOverlay.buttonsDomTabB[i])
+            }
+            else{
+                letterCellsTab.push(openOverlay.buttonsDomTabB[i])
+                letterTab.push(openOverlay.buttonsMatriceB[i])
+            }
+        }
+
+        // Displaying the two buttons span by span (and for each king of characters)
 
         let x = 0
         let hiddenCellsTabDisplay = window.setInterval(function(){
@@ -201,8 +248,11 @@ let openOverlay = {
                 clearInterval(binaryCellsTabDisplay)
             }
         },10)
+
+        // Setting of the random binary characters change for the first button
+
         let randomBinaryChangeInterval = window.setInterval(function(){
-            if(openOverlay.stopInterval == true){
+            if(openOverlay.stopBinaryInterval == true){
                 clearInterval(randomBinaryChangeInterval)
             }
             else{
@@ -212,76 +262,88 @@ let openOverlay = {
             }
         },10)
 
+        // Displaying the text in the two buttons with a little delay
+
         setTimeout(function(){
             let z = 0
-        let letterCellsTabDisplay = window.setInterval(function(){
-            if(z < letterCellsTab.length){           
-                letterCellsTab[z].style.opacity = 1
-                letterCellsTab[z].innerHTML = letterTab[z]
-                z++
-            }
-            else{
-                clearInterval(letterCellsTabDisplay)
-            }
-        },50)
-        },2000)
-
-        document.querySelector(".container_openOverlay_buttons").addEventListener('click', function(){
-            openOverlay.rainAnimation(0)
-            TweenMax.to(document.querySelector(".container_openOverlay_buttons"),0,{opacity:0})
-        })
-
-    },
-
-    refreshDomTabBox : function(){
-        openOverlay.stopInterval = true
-        for(let i = 0 ; i < openOverlay.width ; i++){
-            let tab = []
-            openOverlay.domTabBoxNew.push(tab)
-            for (let j = 0; j < openOverlay.height; j++) {
-                if(i != 1){
-                    openOverlay.domTabBoxNew.push(openOverlay.domTab[i][j])
+            let letterCellsTabDisplay = window.setInterval(function(){
+                if(z < letterCellsTab.length){           
+                    letterCellsTab[z].style.opacity = 1
+                    letterCellsTab[z].innerHTML = letterTab[z]
+                    z++
                 }
-            }
-        }
-       
+                else{
+                    
+                    // Allowing click and the two buttons after their displaying
+
+                    document.querySelector(".container_openOverlay_buttonsA").style.pointerEvents = "auto"
+                    document.querySelector(".container_openOverlay_buttonsB").style.pointerEvents = "auto"
+                    clearInterval(letterCellsTabDisplay)
+                }
+            },50)
+        },3200)
+
+        // Setting the click event of the first button (which lead to the end of the introduction and the beginning of the game)
+
+        document.querySelector(".container_openOverlay_buttonsA").addEventListener('click', function(){
+
+            // Make the background matrix disappear
+
+            openOverlay.rainAnimation(0)
+
+            // Make disappear span by span the two buttons (for each kind of character)
+            
+            let a = 0
+            let hiddenCellsTabRemove = window.setInterval(function(){
+                if(a < hiddenCellsTab.length){
+                    hiddenCellsTab[a].style.opacity = 0
+                    a++
+                }
+                else{
+                    clearInterval(hiddenCellsTabRemove)
+                }
+            },10)
+
+            let b = 0
+            let binaryCellsTabRemove = window.setInterval(function(){
+                if(b < binaryCellsTab.length){           
+                    binaryCellsTab[b].style.opacity = 0
+                    b++
+                }
+                else{
+                    openOverlay.stopBinaryInterval = true
+                    clearInterval(binaryCellsTabRemove)
+                }
+            },10)
+
+            let c = 0
+            let letterCellsTabRemove = window.setInterval(function(){
+                if(c < letterCellsTab.length){           
+                    letterCellsTab[c].style.opacity = 0
+                    c++
+                }
+                else{
+                    clearInterval(letterCellsTabRemove)
+                }
+            },10)
+        })
     },
 
-    randomBinaryChange : function(targetTab){
-        let randomBinaryChangeInterval = window.setInterval(function(){
-            if(openOverlay.stopInterval == true){
-                clearInterval(randomBinaryChangeInterval)
-            }
-            if(targetTab.innerHTML == "1"){
-                targetTab.innerHTML = "0"
-            }
-            else{
-                targetTab.innerHTML = "1"
-            }
-        },10)
+    // This rain animation is not the same that in the movie "The Matrix" but it is an effect in the same graphic style
 
-    },
-
-    openAnimation : function(){
-        TweenMax.staggerTo(openOverlay.domTabBox, 1, {
-            opacity: 0,
-            ease: Power1.easeInOut,
-            stagger: {
-              grid: [150,50],
-              from: "center",
-              amount: 3
-            }
-          })
-    },
-
-    rainAnimation : function(opacity){
+    rainAnimation : function(opacity){ // opacity --> make the matrix disappear for 0 and appear for 1
 
         let randColumn
         let randColumnHistoric = []
         let randColumnTest
         let randRow 
         let finalOpacity = opacity
+
+        // Setting the interval that make the rain appear randomly on the x axis and the y axis
+
         let randomRain = window.setInterval(function(){
+
+            // Avoiding that the rain start more than one time on the same column
 
             do{
                 randColumn = Math.floor(Math.random()*(openOverlay.width+1))
@@ -294,11 +356,14 @@ let openOverlay = {
             }while(randColumnTest > 0)
             randColumnHistoric.push(randColumn)
 
+            // Start at a random row
+
             randRow = Math.floor(Math.random()*(openOverlay.height+1))
+
+            // Using GSAP TweenMax Stagger to do the smooth opacity animation on the whole line with an effect of spread
 
             TweenMax.staggerTo(openOverlay.domTab[randColumn], 0.5, {
                 opacity: finalOpacity,
-                // textShadow: "0 0 10px #00FF00",
                 ease: Power1.easeInOut,
                 stagger: {
                   from: randRow,
@@ -306,20 +371,30 @@ let openOverlay = {
                 }
             })
 
+            // Displaying the buttons when the rain animation is done
+
             if(randColumnHistoric.length > openOverlay.width){
                 clearInterval(randomRain)
-                setTimeout(function(){
-                    // openOverlay.stopInterval = true
-                    openOverlay.buttonsAnimation()
-                },2000)
-            }
+                if(opacity == 1){
+                    setTimeout(function(){
+                        openOverlay.buttonsAnimation()
+                    },2200)
+                }
 
+                // The case when we make disappear the matrix background --> we don't want to display the buttons
+
+                else if(opacity == 0){
+                    setTimeout(function(){
+                        openOverlay.stopInterval = true
+                    },5000)
+                }
+            }
         },10)
     },
 
-    hoverAnimation : function(){
-        console.log(openOverlay.domTabBox)
+    // Hover animation on the matrix (which is not used)
 
+    hoverAnimation : function(){
         openOverlay.domTabBox.forEach(function(e){
             e.addEventListener('mouseover', function(){
                 TweenMax.to(e, 0, {opacity: 1})
@@ -329,6 +404,8 @@ let openOverlay = {
             })
         })
     },
+
+    // Function that change the characters randomly on the matrix background
 
     randNumberChange : function(target){
         let numberTab = [0,1,2,3,4,5,6,7,8,9]
@@ -343,22 +420,7 @@ let openOverlay = {
             }
         },50)
     },
-
-    buttonsCreation : function(){
-        let middleColumn = Math.floor(this.width/2)-1
-        openOverlay.domTab[middleColumn].forEach(function(e){
-            e.style.opacity = 0
-        })
-        console.log(openOverlay.height)
-    },
-    
 }
-openOverlay.creation()
-// openOverlay.buttonsAnimation()
+openOverlay.domCreation()
 openOverlay.matrixTitleAnimation()
-// openOverlay.rainAnimation()
-// openOverlay.hoverAnimation()
-// openOverlay.randomBinaryChange()
 openOverlay.randNumberChange(openOverlay.domTabBox)
-// openOverlay.openAnimation()
-// openOverlay.buttonsCreation()
