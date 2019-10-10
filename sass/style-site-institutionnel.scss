@@ -165,7 +165,7 @@ main{
         transform: skew(17deg);
         left: -98px;
 
-        transition-property: width, height, z-index, left;
+        transition-property: width, height, z-index, left, top;
         transition-duration: 0.2s;
         transition-timing-function: linear;
 
@@ -447,8 +447,8 @@ RESPONSIVE
             z-index: 5;
             width: 350px;
             height: 530px;
-            left: -197px;
-        
+            left: -193px;
+            top: -26px;
         }
     }
 
@@ -506,9 +506,7 @@ RESPONSIVE
 
 
 }
-/*
-RESPONSIVE
-*/
+
 @media screen and (max-width: 1220px) {
 
     header {
@@ -528,6 +526,14 @@ RESPONSIVE
         width: 232px;
         height: 392px;
         left: -130px;
+
+        &:hover {
+            z-index: 5;
+            width: 264px;
+            height: 445px;
+            left: -153px;
+            top: -26px;
+        }
     }
 
     .main__about{
