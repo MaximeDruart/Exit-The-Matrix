@@ -200,6 +200,7 @@ main{
         &:hover {
             background-color: #1B791C;
             color: black;
+            transition: .3s;
         }
     }
 
@@ -218,9 +219,10 @@ main{
 }
 
 .menuAbout{
+    width: 98% !important;
     left: 25px !important;
-    height: 472px !important;
-    transform: none !important;
+    height: 464px !important; 
+    transform: none !important; 
 }
 
 .displayMenu {
@@ -569,7 +571,7 @@ RESPONSIVE
     .menuDiv {
         width: 706px;
         left: -4px;
-        height: 396px;
+        height: 396px !important;
         transform: skew(-11deg);
     }
 
