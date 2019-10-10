@@ -18,11 +18,19 @@ class Terminal {
           "[g9]" : false,
           "[b4]" : false
         }
-        this.audioSrcArray = [
-          "../sounds/",
-          "../sounds/",
-          "../sounds/"
-        ]
+        this.audios = {
+            "agent" : "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+            "agent": "../sounds/agent.mp3",
+        }
+        
         this.winPosition = false
         this.lose = false
         this.neoPosition="f6" // or b4

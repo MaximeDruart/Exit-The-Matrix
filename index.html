@@ -73,7 +73,9 @@
   </body>
   <script>
     function displayTerminal() {  
-        TweenMax.to(".container .terminal", 0.6, {opacity:1})
+      document.querySelector(".containerIntro").style.display = "none"
+      TweenMax.to(".container .terminal", 0.6, {opacity:1})
+      terminal.activeInput.focus()
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
