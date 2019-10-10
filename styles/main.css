@@ -67,6 +67,7 @@ body{
   width: 10px;
   height: 26px;
   padding: 0px 2px 0px 2px;
+  text-shadow:  1px 1px 10px #5DFC86;
   font-size: 20px;
   font-family: url("../fonts/Terminus.ttf");
   background: black;
@@ -93,6 +94,7 @@ body{
   width: 10px;
   height: 26px;
   padding: 0px 2px 0px 2px;
+  text-shadow:  1px 1px 10px #5DFC86;
   font-size: 20px;
   font-family: url("../fonts/Terminus.ttf");
   background: black;

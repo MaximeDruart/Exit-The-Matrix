@@ -104,7 +104,7 @@ let openOverlay = {
                     ],
     buttonsMatriceB : [
                         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-                        1,1,1,"j","'","a","i","m","e",1,"l","a",1,"b","i","t","e",1,1,
+                        1,1,"S","k","i","p",1,"E","x","p","e","r","i","e","n","c","e",1,1,
                         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
                         
                     ],
@@ -285,7 +285,7 @@ let openOverlay = {
                     clearInterval(letterCellsTabDisplay)
                 }
             },50)
-        },3200)
+        },5000)
 
         // Setting the click event of the first button (which lead to the end of the introduction and the beginning of the game)
 
