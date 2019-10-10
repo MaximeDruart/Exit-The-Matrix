@@ -1,0 +1,97 @@
+body{
+  margin:0;
+  padding:0;
+  background: black;
+}
+
+@font-face {
+  font-family: "Terminus";
+  src: url("../fonts/Terminus.ttf");
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Terminus';
+  font-size:14px;
+  color:#32CD32;
+}
+
+.container_openOverlay{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Matrix background */
+
+.container_openOverlay>div.first{
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.container_openOverlay>div.first>span.first{
+  opacity: 0;
+  padding: 2px 2px 1px 2px;
+  /* text-shadow:  0 0 10px #00FF00; */
+  font-size: 20px;
+  font-family: url("../fonts/Terminus.ttf");
+}
+
+/* Button A */
+
+.container_openOverlay_buttonsA{
+  position: absolute;
+  top: 104px;
+  left: 434px;
+  width: 294px;
+  height: 182px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.container_openOverlay_buttonsA>span.second{
+  display: inline-block;
+  width: 10px;
+  height: 26px;
+  padding: 0px 2px 0px 2px;
+  font-size: 20px;
+  font-family: url("../fonts/Terminus.ttf");
+  background: black;
+  opacity: 0;
+}
+
+/* Button B */
+
+.container_openOverlay_buttonsB{
+  position: absolute;
+  bottom: 78px;
+  left: 448px;
+  width: 266px;
+  height: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.container_openOverlay_buttonsB>span.third{
+  display: inline-block;
+  width: 10px;
+  height: 26px;
+  padding: 0px 2px 0px 2px;
+  font-size: 20px;
+  font-family: url("../fonts/Terminus.ttf");
+  background: black;
+  opacity: 0;
+}
