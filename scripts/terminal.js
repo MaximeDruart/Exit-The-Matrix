@@ -103,7 +103,7 @@ class Terminal {
                 this.playAudio(this.audios["help2"].src)
                 this.neoChatWrite(this.audios["help2"].transcript)
                 this.time1 = new Date()
-                delaySec *=1.5 // on augmente un peu
+                delaySec *=3 // on augmente un peu
             }
         }, 1000);
     }
@@ -197,7 +197,7 @@ class Terminal {
                         /HIDE "item" : hides specified item (map or cam)
                         /ACCESS_CAM ["letter""number"] : displays specified camera using coordinates
                         /PING ["letter""number"] : returns ping for specified phone booth, to know if it is working
-                        /CALL ["letter""number"] : emits a call from a specified phone booth at a specified location
+                        /CALL ["letter""number"] : emits a call for a specified phone booth at a specified location
                         /CLEAR : clears console
                         /TIME : returns time and date
                         /INFO "info" : returns info on specified item
@@ -264,7 +264,6 @@ class Terminal {
         let keyword = val.slice(0, spaceIndex)
         let param = val.slice(spaceIndex + 1)
         let noBrackParam = param.slice(1,3)
-        console.log(noBrackParam)
         switch (keyword) {
 
             case "/send_location":
@@ -507,9 +506,7 @@ class Terminal {
         this.playAudio(this.audios["iGotIt"].src)
         this.neoChatWrite(this.audios["iGotIt"].transcript)
         let tl = new TimelineMax({
-            paused:true,
-            onComplete:this.checkWinOrLose,
-            onCompleteParams : [position]
+            paused:true
         })
         if (this.neoPosition == "f6") {
             switch (position) {
@@ -545,7 +542,7 @@ class Terminal {
                   tl.to(".neoPos", 3.6, {y:270} )
                   break;
 
-                  case "[g9]":
+                case "[g9]":
                   this.isLost = true
                   tl.to(".neoPos", 1.8, {y:-90} )
                   tl.to(".neoPos", 4.2, {x:210} )
@@ -564,29 +561,31 @@ class Terminal {
           }
         }
         tl.play()
+        setTimeout(() => {
+            this.checkWinOrLose(position)
+        }, tl.duration()*1000);
     }
 
     checkWinOrLose(position){
-      console.log("exec", this.isLost,)
       // if player is on the win spot and phone is calling
       if (this.winPosition && !this.phonesCalling[position]) {
         this.playAudio(this.audios["canYouCall"].src)
         this.neoChatWrite(this.audios["canYouCall"].transcript)
         setTimeout(() => {
-            checkWinOrLose()
+            this.checkWinOrLose()
         }, 5000);
       }
-      if (this.winPosition && this.phonesCalling[position]) win()
-      if (this.isLost) lose()
-    }
+      if (this.winPosition && this.phonesCalling[position]) {
+            console.log("win !")
+            TweenMax.set(".finishOverlay_lose", {display:"block"})
+        }
 
-    win(){
-        console.log("win !")
-    }
-
-    lose(){
+      if (this.isLost){
         console.log("lose !")
+        TweenMax.set(".finishOverlay_win", {display:"block"})
+      }
     }
+
 
     switchCams(cam_number_str) {
         // reset la video
