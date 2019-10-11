@@ -320,3 +320,29 @@ body{
     }
 
 }
+@media (screen) and (max-width:1500px){
+    .container{
+        .neo{
+            margin-left: 0;
+            width: 588px;
+            height: 350px;
+            margin-left: 9vh;
+
+        }
+        .cam{
+            margin-left: 0;
+            grid-column: 6;
+            grid-row:7;
+            margin-left:0;
+            width: 559px;
+            height: 355px;
+        }
+
+        .map{
+            grid-column: 6;
+            grid-row: 3;
+            width: 350px;
+            height: 350px;
+        }
+    }
+}
