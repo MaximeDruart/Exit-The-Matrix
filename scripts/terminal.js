@@ -263,6 +263,8 @@ class Terminal {
         let spaceIndex = val.indexOf(" ")
         let keyword = val.slice(0, spaceIndex)
         let param = val.slice(spaceIndex + 1)
+        let noBrackParam = param.slice(1,3)
+        console.log(noBrackParam)
         switch (keyword) {
 
             case "/send_location":
@@ -456,26 +458,29 @@ class Terminal {
                 switch (param) {
                     case "[c3]":
                         this.switchCams("1")
-                        this.write(`Access to camera [${param}] authorized`)
+                        this.write(`Access to camera ${param} authorized`)
+                        TweenMax.set(document.querySelector(".cams"), {backgroundImage:`url(images/${noBrackParam.toUpperCase()}.png)`})
                         break;
 
                     case "[f3]":
                         this.switchCams("4")
-                        this.write(`Access to camera [${param}] authorized`)
+                        this.write(`Access to camera ${param} authorized`)
+                        console.log(`url(images/${noBrackParam.toUpperCase()}).png`)
+                        TweenMax.set(document.querySelector(".cams"), {backgroundImage:`url(images/${noBrackParam.toUpperCase()}.png)`})
                     break;
 
                     case "[d5]": // AGENT
                         this.switchCams("2")
                         if (this.isCamOpen) TweenMax.set(".map .cc2", {backgroundImage:"url(images/icon_camwarning.png)"}) // only works if cams are open
-                        this.write(`Access to camera [${param}] authorized`)
+                        this.write(`Access to camera ${param} authorized`)
+                        TweenMax.set(document.querySelector(".cams"), {backgroundImage:`url(images/${noBrackParam.toUpperCase()}.png)`})
                     break;
 
                     case "[f8]": // AGENT
                         this.switchCams("3")
-                        if (this.isCamOpen) TweenMax.set(".map .cc3", {
-                            backgroundImage: "url(images/icon_camwarning.png)"
-                        }) // only works if cams are open
-                        this.write(`Access to camera [${param}] authorized`)
+                        if (this.isCamOpen) TweenMax.set(".map .cc3", {backgroundImage: "url(images/icon_camwarning.png)"}) // only works if cams are open
+                        this.write(`Access to camera ${param} authorized`)
+                        TweenMax.set(document.querySelector(".cams"), {backgroundImage:`url(images/${noBrackParam.toUpperCase()}.png)`})
                     break;
 
                     default:
@@ -562,7 +567,7 @@ class Terminal {
     }
 
     checkWinOrLose(position){
-      console.log("exec", terminal.isLost, terminal.win)
+      console.log("exec", this.isLost,)
       // if player is on the win spot and phone is calling
       if (this.winPosition && !this.phonesCalling[position]) {
         this.playAudio(this.audios["canYouCall"].src)
@@ -601,7 +606,6 @@ class Terminal {
             // setTimeout(() => {
             // }, transDurationMs);
             // on switch la video de surveillance
-            console.log("mes grosses balls")
         },{once : true})
     }
 

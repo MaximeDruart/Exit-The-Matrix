@@ -5,6 +5,19 @@
     // cursor: none;
     color:#5DFC86;
     text-shadow: 1px 1px 10px #5DFC86;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.containerIntro_openOverlay_buttonsA *{
+    box-sizing: content-box !important;
+}
+
+.containerIntro_openOverlay_buttonsB * {
+    box-sizing: content-box !important;
 }
 
 
