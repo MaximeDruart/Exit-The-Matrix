@@ -43,7 +43,6 @@ body{
 .containerIntro_openOverlay>div.first>span.first{
   opacity: 0;
   padding: 2px 2px 1px 2px;
-  text-shadow:  1px 1px 10px #5DFC86;
   font-size: 20px;
   font-family: url("../fonts/Terminus.ttf");
 }
