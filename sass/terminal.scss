@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box;
     font-family: 'inconsolata';
     margin:0;
     padding:0;
@@ -46,6 +45,7 @@ body{
 
 
 .container{
+    box-sizing: border-box;
     background-image: url("../images/bg2.png");
     background-size: cover;
     display:grid;

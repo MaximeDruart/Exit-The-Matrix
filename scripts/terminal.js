@@ -19,19 +19,57 @@ class Terminal {
           "[b4]" : false
         }
         this.audios = {
-            "agent": "../sounds/agent.mp3",
-            "brokenPhone": "../sounds/brokenPhone.mp3",
-            "camOff": "../sounds/cameraOffSound.mp3",
-            "canYouCall": "../sounds/canYouCall.mp3",
-            "dontUnderstand": "../sounds/dontUnderstand.mp3",
-            "help1": "../sounds/help1.mp3",
-            "help2": "../sounds/help2.mp3",
-            "heyTank": "../sounds/heyTank.mp3",
-            "iGotIt": "../sounds/iGotIt.mp3"
+            "heyTank": {
+                src : "sounds/heyTank.mp3",
+                transcript: "Hey tank, I need your help ! Get me out of the matrix now ! I think the agents are onto me ! I need you to find me a phone booth to get out asap."
+            },
+            "help1": {
+                src : "sounds/help1.mp3",
+                transcript: "Tank, hurry up !"
+            },
+            "help2": {
+                src : "sounds/help2.mp3",
+                transcript: "Please Tank, I need your help now !"
+            },
+            "agent": {
+                src : "sounds/agent.mp3",
+                transcript: "I think there's an agent on this way"
+            },
+            "brokenPhone": {
+                src : "sounds/brokenPhone.mp3",
+                transcript: "There's a problem with the booth ! I need an other one !"
+            },
+            "dontUnderstand": {
+                src : "sounds/dontUnderstand.mp3",
+                transcript: "I don’t understand ..."
+            },
+            "iGotIt": {
+                src : "sounds/iGotIt.mp3",
+                transcript: "I got it !"
+            },
+            "canYouCall": {
+                src : "sounds/canYouCall.mp3",
+                transcript: "Can you call ? I'm right there !"
+            },
+            "camOff": {
+                src : "sounds/cameraOffSound.mp3",
+                transcript : null
+            },
         }
+        this.voiceLinesTranscript = [
+          "Hey tank , i need your help ! get me out of the matrix, and now, i think the agents are on me ! I need you to find me a phone booth to get out asap.",
+          "Tank, hurry up !",
+          "Please Tank, I need your help now !",
+          "I think there's an agent on this way",
+          "There's a problem with the booth ! I need an other one !",
+          "I don’t understand ...",
+          "I got it !",
+          "Can you call ? I'm right there !"
+        
+        ]
         
         this.winPosition = false
-        this.lose = false
+        this.isLost = false
         this.neoPosition="f6" // or b4
         this.textDisplayDone = false
         this.isMapOpen = false
@@ -41,17 +79,8 @@ class Terminal {
         this.commands = ["help", "send", "disconnect", "localize", "display", "call", "info", "clear", "replay", "time", "setColor", "uwu"]
         this.lastCommand = ""
         this.textColor = "#5DFC86"
-
-        this.voiceLinesTranscript = [
-          "Hey tank / dozer, i need your help ! get me out of the matrix, and now, i think the agents are on me ! I need you to find me a phone booth to get out asap.",
-          "Tank, hurry up !",
-          "Please Tank, I need your help now !",
-          "I think there's an agent on this way",
-          "There's a problem with the booth ! I need an other one !",
-          "I don’t understand ...",
-          "I got it !"
-
-        ]
+        this.time1 = ""
+        this.time2 = ""
 
         this.caretBlink()
         this.setInputListener()
@@ -63,6 +92,20 @@ class Terminal {
             } else if (e.code === "Tab") e.preventDefault()
         })
 
+    }
+
+    timeCheckSup10() {
+        let delaySec = 12
+        this.time1 = new Date()
+        setInterval(() => {
+            this.time2 = new Date()
+            if (Math.round((this.time2 - this.time1) / 1000) > delaySec) {
+                this.playAudio(this.audios["help2"].src)
+                this.neoChatWrite(this.audios["help2"].transcript)
+                this.time1 = new Date()
+                delaySec *=1.5 // on augmente un peu
+            }
+        }, 1000);
     }
 
     txtDisplayReady(){
@@ -136,6 +179,7 @@ class Terminal {
     }
 
     respondToInput(val) {
+        this.timeCheckSup10() // on reset la relance toutes les 10 secondes
         if (this.firstInput) this.scenarStart(), this.firstInput = false
         // String.indexOf("substring") >= 0
         let noSlashVal = val[0] == "/" ? val.slice(1) : val
@@ -226,22 +270,27 @@ class Terminal {
                 switch (param) {
                     case "[h3]":
                         // broken phone
-                        neoChatWrite("Ok ! I got it !")
                         this.moveNeoTo(param)
                         this.neoPosition = "h3"
-                        // jouer le son broken phone
+                        setTimeout(() => {                            
+                            this.playAudio(this.audios["brokenPhone"].src)
+                            this.neoChatWrite(this.audios["brokenPhone"].transcript)
+                            TweenMax.set(document.querySelector(".map .ex4"), {
+                                backgroundImage: "url(images/icon_phone_offline.png)"
+                            })
+                        }, 4500);
                         break;
 
                     case "[b4]":
                     //win
-                        neoChatWrite("Ok ! I got it !")
+                        this.neoChatWrite("Ok ! I got it !")
                         this.moveNeoTo(param)
                         break;
 
                     case "[d6]":
                     case "[g9]":
                     //lose
-                        neoChatWrite("Ok ! I got it !")
+                        this.neoChatWrite("Ok ! I got it !")
                         this.moveNeoTo(param)
                         break;
 
@@ -253,6 +302,8 @@ class Terminal {
 
             case "/send":
                 this.neoChatSend(param)
+                this.playAudio(this.audios["dontUnderstand"].src)
+                this.neoChatWrite(this.audios["dontUnderstand"].transcript)
                 break;
 
             case "/setColor":
@@ -448,6 +499,8 @@ class Terminal {
     }
 
     moveNeoTo(position){
+        this.playAudio(this.audios["iGotIt"].src)
+        this.neoChatWrite(this.audios["iGotIt"].transcript)
         let tl = new TimelineMax({
             paused:true,
             onComplete:this.checkWinOrLose,
@@ -456,9 +509,9 @@ class Terminal {
         if (this.neoPosition == "f6") {
             switch (position) {
                 case "[b4]":
+                    this.winPosition = true
                     tl.to(".neoPos", 2.4, {x:-120} )
                     tl.to(".neoPos", 3.6, {y:-180} )
-                    winPosition = true
                     break;
 
                 case "[h3]":
@@ -467,14 +520,14 @@ class Terminal {
                     break;
 
                 case "[g9]":
+                    this.isLost = true
                     tl.to(".neoPos", 1.8, {x:90} )
-                    tl.to(".neoPos", 0.5, {y:25} )
-                    lose = true
+                    // tl.to(".neoPos", 0.5, {y:25} )
                     break;
 
                 case "[d6]":
+                    this.isLost = true
                     tl.to(".neoPos", 1.8, {y:-90} )
-                    lose = true
                     break;
 
                 default:
@@ -483,22 +536,22 @@ class Terminal {
         } else if (this.neoPosition == "h3") {
           switch (position) {
               case "[b4]":
+                  this.winPosition = true
                   tl.to(".neoPos", 3.6, {y:270} )
-                  winPosition = true
                   break;
 
-              case "[g9]":
+                  case "[g9]":
+                  this.isLost = true
                   tl.to(".neoPos", 1.8, {y:-90} )
                   tl.to(".neoPos", 4.2, {x:210} )
                   tl.to(".neoPos", 0.5, {y:25} )
-                  lose = true
                   break;
 
               case "[d6]":
+                  this.isLost = true
                   tl.to(".neoPos", 1.8, {y:-90} )
                   tl.to(".neoPos", 4.2, {x:120} )
                   tl.to(".neoPos", 1.8, {y:-90} )
-                  lose = true
                   break;
 
               default:
@@ -509,18 +562,25 @@ class Terminal {
     }
 
     checkWinOrLose(position){
+      console.log("exec", terminal.isLost, terminal.win)
       // if player is on the win spot and phone is calling
-      if (win && this.phonesCalling[position]) win()
-      if (lose) lose()
-      console.log("win !")
+      if (this.winPosition && !this.phonesCalling[position]) {
+        this.playAudio(this.audios["canYouCall"].src)
+        this.neoChatWrite(this.audios["canYouCall"].transcript)
+        setTimeout(() => {
+            checkWinOrLose()
+        }, 5000);
+      }
+      if (this.winPosition && this.phonesCalling[position]) win()
+      if (this.isLost) lose()
     }
 
     win(){
-
+        console.log("win !")
     }
 
     lose(){
-
+        console.log("lose !")
     }
 
     switchCams(cam_number_str) {
@@ -590,6 +650,10 @@ class Terminal {
     displayNeo() {
         document.querySelector(".map .neoPos").classList.remove("hiddenOp")
         this.neoBlink()
+        setTimeout(() => {
+            this.playAudio(this.audios["help1"].src)
+            this.neoChatWrite(this.audios["help1"].transcript)
+        }, 1000);
     }
 
     call(location) {
@@ -626,7 +690,10 @@ class Terminal {
         setTimeout(() => {
             this.neoComDOM.classList.remove("hiddenOp")
             this.neoChatDOM.classList.remove("hiddenOp")
-            this.neoChatWrite("Hey Tank ! Help me ! bla bla bla")
+            this.playAudio(this.audios["heyTank"].src)
+            this.neoChatWrite(this.audios["heyTank"].transcript)
+
+            this.timeCheckSup10()
         }, 12000)
     }
 }
