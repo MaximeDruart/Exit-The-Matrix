@@ -105,6 +105,7 @@ body{
 /* Finish Overlay */
 
 .finichOverlay{
+  background: black;
   display: none;
   width: 100vw;
   height: 100vh;
@@ -142,5 +143,42 @@ body{
 .finichOverlay_win div a:hover{ 
   color: rgba(93, 252, 134, 1);
   text-shadow:  1px 1px 10px #5DFC86;
+}
+
+@media screen and (max-width: 1100px) {
+  
+  .littleDevicesOverlay{
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Inconsolata', monospace;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .littleDevicesOverlay p:first-child{
+    font-size: 70px;
+    margin-top: 5vh;
+  }
+
+  .littleDevicesOverlay img{
+    width: 27vw;
+    height: auto;
+  }
+
+  .littleDevicesOverlay p:nth-child(3){
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    width: 70vw;
+    margin-bottom: 5vh;
+  }
+
 }
 
