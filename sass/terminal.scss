@@ -322,13 +322,14 @@ body{
     }
 
 }
-@media (screen) and (max-width:1500px){
+
+@media (max-width: 1600px) {
     .container{
         .neo{
             margin-left: 0;
             width: 588px;
             height: 350px;
-            margin-left: 9vh;
+            margin-left: 9vh !important;
 
         }
         .cam{

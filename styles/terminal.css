@@ -232,12 +232,12 @@ body {
       margin-top: 15px;
       width: 80%; }
 
-@media (screen) and (max-width: 1500px) {
+@media (max-width: 1600px) {
   .container .neo {
     margin-left: 0;
     width: 588px;
     height: 350px;
-    margin-left: 9vh; }
+    margin-left: 9vh !important; }
   .container .cam {
     margin-left: 0;
     grid-column: 6;
