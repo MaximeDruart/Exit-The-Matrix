@@ -219,7 +219,7 @@ class Terminal {
                     break;
 
                 case "/gotosite":
-                    window.location.href = "maxime.druart.github.io/"
+                    window.location.href = "https://maximedruart.github.io/Exit-The-Matrix/movie-scenes"
                     break;
 
                 // on gére le cas ou le parametre est omis pour guider l'utilsatuer
