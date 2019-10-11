@@ -13,9 +13,9 @@ To try our website, you can visit this [link](https://maximedruart.github.io/Exi
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [HTML5](https://www.w3.org/html/)
+* [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript) 
+* [TweenMax GSAP](https://greensock.com/tweenmax/)
 
 
 
