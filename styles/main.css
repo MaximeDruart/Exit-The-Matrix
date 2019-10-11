@@ -104,8 +104,7 @@ body{
 
 /* Finish Overlay */
 
-.finichOverlay{
-  background: black;
+.finishOverlay{
   display: none;
   width: 100vw;
   height: 100vh;
@@ -116,21 +115,24 @@ body{
   z-index: 11;
 }
 
-.finichOverlay_win{
+/* Lose */
+
+.finishOverlay_lose{
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+  z-index: 11;
 }
-.finichOverlay_win div{
+.finishOverlay_lose div{
   height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-.finichOverlay_win div a{ 
+.finishOverlay_lose div a{ 
   text-decoration: none;
   font-size: 65px;
   color: rgba(0, 0, 0, 0);
@@ -140,10 +142,59 @@ body{
   -webkit-text-stroke-color: #5DFC86;
   z-index: 20;
 }
-.finichOverlay_win div a:hover{ 
+.finishOverlay_lose div a:hover{ 
   color: rgba(93, 252, 134, 1);
   text-shadow:  1px 1px 10px #5DFC86;
 }
+
+/* Win */
+
+.finishOverlay_win{
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../images/successBackground.png");
+}
+.finishOverlay_win_container{
+  width: 20vw;
+  height: 50vh;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.finishOverlay_win_container p:first-child{
+  margin-top: 5Opx;
+  font-size: 75px;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #5DFC86;
+}
+.finishOverlay_win_container p:nth-child(2){
+  padding-bottom: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.finishOverlay_win_container_buttonsContainer{
+  width: 24vw;
+  display: flex;
+  justify-content: space-between;
+}
+.finishOverlay_win_container_buttonsContainer a{
+  text-decoration: none;
+  font-size: 27px;
+  padding: 5px;
+  text-shadow:  none;
+  padding-bottom: 60px;
+}
+.finishOverlay_win_container_buttonsContainer a:hover{
+  text-shadow:  1px 1px 10px #5DFC86;
+}
+
 
 .littleDevicesOverlay{
   display: none;
@@ -165,6 +216,7 @@ body{
     align-items: center;
     justify-content: space-around;
     touch-action: none;
+    overflow: hidden;
   }
 
   .littleDevicesOverlay p:first-child{
