@@ -429,7 +429,6 @@ let openOverlay = {
 
 if(screen.width > 1100){
     if (window.location.href.lastIndexOf("#noanim") == -1) {
-        console.log(screen.width)
         window.onload = function(){
             openOverlay.domCreation()
             openOverlay.matrixTitleAnimation()
@@ -440,5 +439,5 @@ if(screen.width > 1100){
     }
 }
 else{
-    
+
 }
