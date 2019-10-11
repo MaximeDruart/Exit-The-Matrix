@@ -659,11 +659,11 @@ class Terminal {
         tl.play()
         // on check la win une fois la tl fini
         setTimeout(() => {
-            this.checkWinOrLose(position)
-            if (position == "[b4]" && !this.phonesCalling[b4]) {
+            if (position == "[b4]" && !this.phonesCalling["b4"]) {
                 this.playAudio(this.audios["canYouCall"].src)
                 this.neoChatWrite(this.audios["canYouCall"].transcript)
             }
+            this.checkWinOrLose(position)
         }, tl.duration() * 1000);
     }
 
