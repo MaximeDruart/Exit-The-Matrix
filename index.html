@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
+    <title>Save neo</title>
     <meta charset="utf-8">
-    <title>Save néo</title>
-    <meta name="description" content="Vivez l'expérience matrix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live an immersive experience around the matrix universe !">
     <meta name="robots" content="noindex, nofollow">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/terminal.css">
+    <link rel="icon" href="images/favicon.jpg" />
   </head>
   <body>
+    <div class="littleDevicesOverlay">
+      <p>MATRIX</p>
+      <img src="images/computerIcon.png" alt="">
+      <p>THIS EXPERIENCE IS AVALAIBLE ONLY FOR COMPUTER</p>
+    </div>
+    <div class="finichOverlay">
+      <div class="finichOverlay_win">
+        <div>
+          <a href="index.html#noanime">TRY AGAIN</a>
+          <a href="movie-scenes.html">WEBSITE</a>
+        </div>
+      </div>
+      <div class="finichOverlay_lose">
+
+      </div>
+    </div>
     <div class="containerIntro">
         <div class="containerIntro_openOverlay">
           <div class="containerIntro_openOverlay_buttonsA">
@@ -17,7 +36,58 @@
           </div>
         </div>
     </div>
+    <div class="container">
+      <div class="terminal">
+        <div class="inputLine">
+          <span class="prefix">[MATRIX]</span>
+          <input class="initialInput" spellcheck="false" size=1 maxlength="40" type="text">
+          <span class="caret">&#9646;</span>
+        </div>
+      </div>
+      <div class="neo">
+        <div class="neoCom hiddenOp">
+          <div class="desc">
+            <div class="orb_r receiving">RECEIVING CALL FROM : 213-509-6995</div>
+            <div class="orb_r connecting">CONNECTED</div>
+          </div>
+          <div class="audioWave">
+          </div>
+        </div>
+        <div class="neoChat hiddenOp">
+          <div class="textLines">
+            <!-- insertion des dialogues ici -->
+          </div>
+        </div>
+      </div>
+      <div class="map hiddenOp ">
+        <div class="cctv cc1"></div>
+        <div class="cctv cc2"></div>
+        <div class="cctv cc3"></div>
+        <div class="cctv cc4"></div>
+    
+        <div class="exit ex1"></div>
+        <div class="exit ex2"></div>
+        <div class="exit ex3"></div>
+        <div class="exit ex4"></div>
+        <div class="neoPos hiddenOp"></div>
+      </div>
+      <div class="cams hiddenOp">
+        <video autoplay src="videos/cctv01.mp4">
+        </video>
+      </div>
+    </div>
   </body>
+  <script>
+    function displayTerminal() {  
+      document.querySelector(".containerIntro").style.display = "none"
+      TweenMax.to(".container .terminal", 0.6, {opacity:1})
+      document.querySelector(".initialInput").focus()
+    }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+  <script src="scripts/glitch.js"></script>
+  <script src="scripts/terminal.js" charset="utf-8"></script>
 </html>

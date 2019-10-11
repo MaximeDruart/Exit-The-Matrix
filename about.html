@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>About Matrix</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What about Matrix ?">
+    <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/style-site-institutionnel.css">
-    <title>Matrix | The movie | About</title>
+    <link rel="icon" href="images/favicon.jpg" />
 </head>
 <body>
     <canvas class="matrix-canvas">
@@ -18,20 +21,22 @@
         </header> <!--Header end-->
         <main>
             <div class="social">
-                <a><img src="images/fb.svg" alt="facebook"></a>
-                <a><img src="images/twitter.svg" alt="twitter"></a>
-                <a><img src="images/insta.svg" alt="instagram"></a>
+                <a href="https://www.facebook.com/TheMatrixMovie/"><img src="images/fb.svg" alt="facebook"></a>
+                <a href="https://twitter.com/hashtag/matrix"><img src="images/twitter.svg" alt="twitter"></a>
+                <a href="https://www.instagram.com/explore/tags/thematrix/?hl=fr"><img src="images/insta.svg" alt="instagram"></a>
             </div>
             <div class="main__about">
                 <!-- Menu div start -->
                  <div class="menuDiv menuAbout">
                     <a href="movie-scenes.html" title="Sauver Neo" class="menuDiv__recue ">Rescue Neo</a>
+                    <a href="http://www.allocine.fr/seance/film-19776/toutes/" title="cinema" class="menuDiv__recue menuDiv__film">Go to watch Matrix</a>
                     <a href="about.html" title="En savoir plus" class="menuDiv__about">Learn more</a>
                     <a href="cookies.html" title="Mentions légales" class="menuDiv__cookies">Legal notice</a>
                 </div> <!-- Menu div end -->
+                <!-- Contains about start -->
                 <div class="main__flex">
                     <div class="about__synopsis">
-                        <h3>Sinopsis</h3>
+                        <h3>Synopsis</h3>
                         <p>
                             <span class="text__typing"></span>
                             <span class="text__cursor">|</span>
@@ -40,8 +45,8 @@
                     <div class="about__production">
                         <h3>Produced by</h3>
                         <p>Les Wachowski</p>
-                        <img src="images/warner-bros-logo-png-image-warner-bros-logo-png-dexter-s-laboratory-wiki-fandom-powered-by-wikia-573 2.svg" alt="">
-                        <img src="images/Village-Roadshow-Pictures-Logo 2.svg" alt="">
+                        <img src="images/Warner-bros-logo.png" width="79px" height="auto" alt="Logo warner bros">
+                        <img src="images/Village-Roadshow-Pictures-Logo.png" width="116x" height="auto" alt="Logo Village RoadShow">
                     </div>
                     <div class="about__casting">
                         <h3>Casting</h3>
@@ -55,16 +60,19 @@
                     </div>
                 </div>
                 <div class="about__last">
-                    Sortie en France le 28 octobre 2019
+                    Released in the 28 th october 2019
                 </div>
             </div>
+            <!-- Contains about end -->
         </main>
+        <!-- Button sound control start -->
         <div class="sound__control">
             <img src="images/mute.svg" alt="sound" class="mute">
             <audio autoplay loop>
-                <source src="sounds/11055.mp3" type="audio/mpeg" >
+                <source src="sounds/backInstit.mp3" type="audio/mpeg" >
             </audio>
         </div>
+        <!-- Button sound control end -->
     </div>
     <!-- Canvas background Matrix fall script -->
     <script src="scripts/scriptMatrixFall.js"></script>

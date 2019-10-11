@@ -1,6 +1,5 @@
 let i = 0, text
-text = "Matrix est un film qui aura lorem ipsoum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec est vitae odio ullamcorper malesuada. Cras cursus cursus hendrerit. Donec tristique ex quam. Quisque varius lectus, assa non eros laoreet, sed vestibulum nisl tincidunt. In porta sagittis erat, euaugue egestas id. Etiam eros magna, vehicula sit amet eros ut, convallis mattis tellus. Praesent porttitor odio nisi, non finibus velit molestie ac. Ut facilisis ullamcorper neque, a dignissim leo."
-console.log(text)
+text = "Anonymous programmer in an administrative department during the day, Thomas Anderson becomes Neo at night. Under this pseudonym, he is one of the most wanted hackers in cyberspace. Straddling between two worlds, Neo is beset by strange dreams and encrypted messages from a certain Morpheus. He exhorted him to go beyond appearances and find the answer to the question that constantly haunts his thoughts: what is the Matrix ?"
 
 function typing(){
     

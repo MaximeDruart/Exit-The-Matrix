@@ -94,17 +94,17 @@ let openOverlay = {
                         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
                     ],
     buttonsMatriceA : [
-                        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-                        1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,
-                        1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,
-                        1,1,2,1,1,"S","a","u","v","e","r",1,1,"N","e","o",1,1,2,1,1,
-                        1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,
-                        1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,
-                        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+                        0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+                        0,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,0,
+                        0,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,0,
+                        0,1,1,2,1,1,"S","a","v","e",1,1,"N","e","o",1,1,2,1,1,0,
+                        0,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,0,
+                        0,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,0,
+                        0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
                     ],
     buttonsMatriceB : [
                         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-                        1,1,"A","c","c","é","d","e","r",1,"a","u",1,"s","i","t","e",1,1,
+                        1,1,"S","k","i","p",1,"E","x","p","e","r","i","e","n","c","e",1,1,
                         1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
                         
                     ],
@@ -200,7 +200,9 @@ let openOverlay = {
         // Filling the tabs with the help of the matrix A : "buttonsMatriceA"
 
         for (let i = 0; i < openOverlay.buttonsMatriceA.length; i++) {
-            if(openOverlay.buttonsMatriceA[i] == 1){
+            if(openOverlay.buttonsMatriceA[i] == 0){
+            }
+            else if(openOverlay.buttonsMatriceA[i] == 1){
                 hiddenCellsTab.push(openOverlay.buttonsDomTabA[i])
             }
             else if(openOverlay.buttonsMatriceA[i] == 2){
@@ -215,7 +217,9 @@ let openOverlay = {
         // Filling the tabs with the help of the matrix B : "buttonsMatriceB"
 
         for (let i = 0; i < openOverlay.buttonsMatriceB.length; i++) {
-            if(openOverlay.buttonsMatriceB[i] == 1){
+            if(openOverlay.buttonsMatriceB[i] == 0){
+            }
+            else if(openOverlay.buttonsMatriceB[i] == 1){
                 hiddenCellsTab.push(openOverlay.buttonsDomTabB[i])
             }
             else{
@@ -281,7 +285,7 @@ let openOverlay = {
                     clearInterval(letterCellsTabDisplay)
                 }
             },50)
-        },3200)
+        },5000)
 
         // Setting the click event of the first button (which lead to the end of the introduction and the beginning of the game)
 
@@ -386,6 +390,7 @@ let openOverlay = {
                 else if(opacity == 0){
                     setTimeout(function(){
                         openOverlay.stopInterval = true
+                        displayTerminal()
                     },5000)
                 }
             }
@@ -421,6 +426,19 @@ let openOverlay = {
         },50)
     },
 }
-openOverlay.domCreation()
-openOverlay.matrixTitleAnimation()
-openOverlay.randNumberChange(openOverlay.domTabBox)
+
+if(screen.width > 1100){
+    if (window.location.href.lastIndexOf("#noanim") == -1) {
+        console.log(screen.width)
+        window.onload = function(){
+            openOverlay.domCreation()
+            openOverlay.matrixTitleAnimation()
+            openOverlay.randNumberChange(openOverlay.domTabBox)
+        }
+    } else {
+        displayTerminal()
+    }
+}
+else{
+    
+}

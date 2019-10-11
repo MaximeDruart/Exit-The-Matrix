@@ -1,0 +1,327 @@
+*{
+    font-family: 'inconsolata';
+    margin:0;
+    padding:0;
+    // cursor: none;
+    color:#5DFC86;
+    text-shadow: 1px 1px 10px #5DFC86;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.containerIntro_openOverlay_buttonsA *{
+    box-sizing: content-box !important;
+}
+
+.containerIntro_openOverlay_buttonsB * {
+    box-sizing: content-box !important;
+}
+
+
+
+@font-face{
+    font-family: 'orbitron_regular';
+    src: url("../fonts/Orbitron-Regular.ttf")
+}
+
+@font-face {
+    font-family: 'orbitron_bold';
+    src: url("../fonts/Orbitron-Bold.ttf")
+}
+
+@font-face{
+    font-family: "inconsolata";
+    src: url("../fonts/Inconsolata.otf")
+}
+
+body{
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+    background-color: black;
+}
+
+.hiddenOp{
+    opacity:0;
+}
+
+.orb_r{
+    font-family: 'orbitron_regular';
+}
+
+.orb_b {
+    font-family: 'orbitron_bold';
+}
+
+
+.container{
+    box-sizing: border-box;
+    background-image: url("../images/bg2.png");
+    background-size: cover;
+    display:grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
+    width:100%;
+    height:100%;
+    padding:40px;
+
+    .terminal::-webkit-scrollbar {
+        display: none;
+    }
+
+    .terminal{
+        opacity:0;
+        overflow-y:scroll;
+        grid-column: 1 / span 5 ;
+        grid-row: 1 / span 9 ;
+        letter-spacing:-1px;
+        font-size:22px;
+        background-color: inherit;
+        border:none;
+        width:80%;
+        transition: 0.6s all ease-in-out;
+
+        .inputLine{
+            width:100%;
+            display:flex;
+            flex-flow:row nowrap;
+            margin-bottom: 5px;
+            margin-top: 5px;
+
+            .prefix {
+                margin-right: 17px;
+                color:#5DFC86;
+                text-shadow: 1px 1px 10px #5DFC86;
+            }
+
+            input {
+                color:#5DFC86;
+                text-shadow: 1px 1px 10px #5DFC86;
+                background-color: inherit;
+                border: none;
+                font-size: 22px;
+                letter-spacing: -1px;
+                caret-color: transparent !important;
+            }
+
+            input:focus {
+                border: none;
+                outline: none;
+            }
+
+            .caret{
+
+            }
+
+        }
+
+        .response{
+            padding-left: 25px;
+            font-size:22px;
+        }
+
+    }
+
+    .neo{
+        margin-left:15vh;
+        grid-column: 8;
+        grid-row: 1;
+        height: 700px;
+        width: 410px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        z-index:10;
+
+
+        .neoCom {
+            background-image: url("../images/window_call.png");
+            background-size: cover;
+            padding:45px;
+            width: 100%;
+            height:47%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            // background-color: black;
+            // box-shadow: 1px 1px 15px rgba(93, 252, 134, 0.25);
+
+            .desc{
+                margin-top:20px;
+
+                .connecting{
+                    margin-top:5px;
+                    font-size:14px;
+                    color:white;
+                }
+            }
+
+            .audioWave {
+                background-image: url("../images/audioSpectrum.gif");
+                background-size: cover;
+                width: 90%;
+                height: 40%;
+            }
+        }
+
+
+        .neoChat {
+            margin-top:-10px;
+            background-image: url("../images/window_chat.png");
+            background-size: cover;
+            width: 100%;
+            height: 53%;
+            padding:45px;
+            padding-top:75px;
+
+            .textLines::-webkit-scrollbar {
+                display: none;
+            }
+
+            .textLines{
+                height:100%;
+                width:100%;
+                overflow-y:scroll;
+
+                .neoChatLine {
+                    width: 100%;
+                    margin-bottom: 6px;
+                    line-height: 1.2;
+                    font-family: 'orbitron_regular';
+                    font-size:20px;
+                }
+                .neoTalking{
+                    color:white;
+                }
+            }
+
+        }
+
+    }
+
+
+    .map {
+        margin-top: -30px;
+        grid-column: 6 ;
+        grid-row: 2 ;
+        width:500px;
+        height:500px;
+        background-color: lightskyblue;
+        background-image: url("../images/map.png");
+        background-size:cover;
+        box-shadow: 1px 1px 10px rgba(93, 252, 134, 0.4);
+        display: grid;
+        grid-template-columns: repeat(20, 5%);
+        grid-template-rows: repeat(20, 5%);
+        padding: 30px;
+
+
+
+        .cctv{
+            background-image: url("../images/icon_cam.png");
+            width: 42px;
+            height: 42px;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        .cc1 {
+          margin-top:-10px;
+            grid-row: 5 ;
+            grid-column: 5 ;
+        }
+
+        .cc2 {
+          margin-top: 10px;
+          margin-left: 5px;
+            grid-row: 7 ;
+            grid-column: 9 ;
+        }
+
+        .cc3 {
+            margin-top: -2px;
+            margin-left: 4px;
+            grid-row: 11 ;
+            grid-column: 15 ;
+        }
+
+        .cc4 {
+            grid-row: 11 ;
+            grid-column: 5 ;
+        }
+
+        .exit{
+            background-image: url("../images/icon_phone.png");
+            width: 42px;
+            height: 42px;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        .ex1 {
+          margin-left: -11px;
+          margin-top: 10px;
+            grid-row: 3 ;
+            grid-column: 7 ;
+        }
+
+        .ex2 {
+            grid-row: 7 ;
+            grid-column: 11 ;
+        }
+
+        .ex3 {
+          margin-top: -13px;
+          margin-left:13px;
+            grid-row: 13 ;
+            grid-column: 17 ;
+        }
+
+        .ex4 {
+            grid-row: 15 ;
+            grid-column: 5 ;
+        }
+
+        .neoPos{
+            background-image: url("../images/icon_neo.png");
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            grid-row: 11;
+            grid-column: 11;
+            margin-top:3px;
+            margin-left:-9px;
+        }
+    }
+
+    .cams {
+        z-index: 10;
+        margin-top: 20px;
+        margin-left: 50px;
+        grid-column: 5;
+        grid-row: 6;
+        width: 599px;
+        height: 375px;
+        background-image: url(../images/window_cam.png);
+        background-size: cover;
+        z-index: 10;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video{
+            margin-top:15px;
+            width:80%;
+        }
+    }
+
+}

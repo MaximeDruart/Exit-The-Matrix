@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Matrix";
   src: url("../fonts/matrix.ttf"); }
@@ -49,7 +48,8 @@ header {
     display: inline-block;
     margin-top: 20px; }
     header .header--ButtonMenu:hover {
-      filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%); }
+      filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
+      cursor: pointer; }
 
 /*Glitch */
 .matrix {
@@ -80,153 +80,153 @@ header {
 
 @keyframes glitch-anim {
   0% {
-    clip: rect(65px, 9999px, 32px, 0);
-    transform: skew(0.96deg); }
+    clip: rect(21px, 9999px, 52px, 0);
+    transform: skew(0.33deg); }
   5% {
-    clip: rect(6px, 9999px, 44px, 0);
-    transform: skew(0.82deg); }
+    clip: rect(22px, 9999px, 35px, 0);
+    transform: skew(0.3deg); }
   10% {
-    clip: rect(6px, 9999px, 65px, 0);
-    transform: skew(0.68deg); }
+    clip: rect(37px, 9999px, 4px, 0);
+    transform: skew(0.33deg); }
   15% {
-    clip: rect(16px, 9999px, 7px, 0);
-    transform: skew(0.31deg); }
+    clip: rect(44px, 9999px, 21px, 0);
+    transform: skew(0.8deg); }
   20% {
-    clip: rect(21px, 9999px, 74px, 0);
-    transform: skew(0.83deg); }
+    clip: rect(99px, 9999px, 92px, 0);
+    transform: skew(0.9deg); }
   25% {
-    clip: rect(13px, 9999px, 81px, 0);
-    transform: skew(0.05deg); }
+    clip: rect(33px, 9999px, 87px, 0);
+    transform: skew(0.21deg); }
   30% {
-    clip: rect(62px, 9999px, 82px, 0);
-    transform: skew(0.58deg); }
+    clip: rect(55px, 9999px, 63px, 0);
+    transform: skew(0.6deg); }
   35% {
-    clip: rect(90px, 9999px, 60px, 0);
-    transform: skew(0.23deg); }
+    clip: rect(71px, 9999px, 72px, 0);
+    transform: skew(0.2deg); }
   40% {
-    clip: rect(76px, 9999px, 69px, 0);
-    transform: skew(0.16deg); }
+    clip: rect(55px, 9999px, 63px, 0);
+    transform: skew(0.68deg); }
   45% {
-    clip: rect(71px, 9999px, 7px, 0);
-    transform: skew(0.79deg); }
+    clip: rect(55px, 9999px, 67px, 0);
+    transform: skew(0.3deg); }
   50% {
-    clip: rect(59px, 9999px, 24px, 0);
-    transform: skew(0.37deg); }
+    clip: rect(11px, 9999px, 50px, 0);
+    transform: skew(0.47deg); }
   55% {
-    clip: rect(39px, 9999px, 45px, 0);
-    transform: skew(0.16deg); }
+    clip: rect(11px, 9999px, 44px, 0);
+    transform: skew(0.04deg); }
   60% {
-    clip: rect(37px, 9999px, 69px, 0);
-    transform: skew(0.82deg); }
+    clip: rect(99px, 9999px, 35px, 0);
+    transform: skew(0.5deg); }
   65% {
-    clip: rect(54px, 9999px, 35px, 0);
-    transform: skew(0.32deg); }
+    clip: rect(44px, 9999px, 65px, 0);
+    transform: skew(0.25deg); }
   70% {
-    clip: rect(42px, 9999px, 44px, 0);
-    transform: skew(0.97deg); }
+    clip: rect(64px, 9999px, 8px, 0);
+    transform: skew(0.53deg); }
   75% {
-    clip: rect(79px, 9999px, 13px, 0);
-    transform: skew(0.36deg); }
+    clip: rect(99px, 9999px, 97px, 0);
+    transform: skew(0.68deg); }
   80% {
-    clip: rect(69px, 9999px, 13px, 0);
-    transform: skew(0.48deg); }
+    clip: rect(48px, 9999px, 69px, 0);
+    transform: skew(0.49deg); }
   85% {
-    clip: rect(80px, 9999px, 7px, 0);
-    transform: skew(0.72deg); }
+    clip: rect(41px, 9999px, 48px, 0);
+    transform: skew(0.18deg); }
   90% {
-    clip: rect(71px, 9999px, 4px, 0);
-    transform: skew(0.88deg); }
+    clip: rect(63px, 9999px, 39px, 0);
+    transform: skew(0.92deg); }
   95% {
-    clip: rect(75px, 9999px, 43px, 0);
-    transform: skew(0.35deg); }
+    clip: rect(20px, 9999px, 3px, 0);
+    transform: skew(0.79deg); }
   100% {
-    clip: rect(68px, 9999px, 10px, 0);
-    transform: skew(0.69deg); } }
+    clip: rect(38px, 9999px, 72px, 0);
+    transform: skew(0.86deg); } }
 @keyframes glitch-anim2 {
   0% {
-    clip: rect(51px, 9999px, 69px, 0);
-    transform: skew(0.9deg); }
+    clip: rect(83px, 9999px, 100px, 0);
+    transform: skew(0.91deg); }
   5% {
-    clip: rect(94px, 9999px, 67px, 0);
-    transform: skew(0.1deg); }
+    clip: rect(91px, 9999px, 67px, 0);
+    transform: skew(0.38deg); }
   10% {
-    clip: rect(13px, 9999px, 84px, 0);
-    transform: skew(0.75deg); }
+    clip: rect(24px, 9999px, 78px, 0);
+    transform: skew(0.41deg); }
   15% {
-    clip: rect(44px, 9999px, 75px, 0);
-    transform: skew(0.49deg); }
+    clip: rect(2px, 9999px, 45px, 0);
+    transform: skew(0.56deg); }
   20% {
-    clip: rect(34px, 9999px, 29px, 0);
-    transform: skew(0.59deg); }
-  25% {
-    clip: rect(94px, 9999px, 97px, 0);
-    transform: skew(0.3deg); }
-  30% {
-    clip: rect(13px, 9999px, 11px, 0);
-    transform: skew(0.46deg); }
-  35% {
-    clip: rect(89px, 9999px, 13px, 0);
-    transform: skew(0.65deg); }
-  40% {
-    clip: rect(48px, 9999px, 62px, 0);
-    transform: skew(0.21deg); }
-  45% {
-    clip: rect(40px, 9999px, 20px, 0);
-    transform: skew(0.72deg); }
-  50% {
-    clip: rect(5px, 9999px, 34px, 0);
-    transform: skew(0.98deg); }
-  55% {
-    clip: rect(33px, 9999px, 2px, 0);
-    transform: skew(0.12deg); }
-  60% {
-    clip: rect(78px, 9999px, 87px, 0);
-    transform: skew(0.66deg); }
-  65% {
-    clip: rect(18px, 9999px, 61px, 0);
-    transform: skew(0.93deg); }
-  70% {
-    clip: rect(5px, 9999px, 94px, 0);
+    clip: rect(4px, 9999px, 11px, 0);
     transform: skew(0.24deg); }
+  25% {
+    clip: rect(94px, 9999px, 72px, 0);
+    transform: skew(0.43deg); }
+  30% {
+    clip: rect(93px, 9999px, 38px, 0);
+    transform: skew(0.98deg); }
+  35% {
+    clip: rect(37px, 9999px, 2px, 0);
+    transform: skew(0.2deg); }
+  40% {
+    clip: rect(47px, 9999px, 38px, 0);
+    transform: skew(0.43deg); }
+  45% {
+    clip: rect(100px, 9999px, 52px, 0);
+    transform: skew(0.52deg); }
+  50% {
+    clip: rect(39px, 9999px, 14px, 0);
+    transform: skew(0.64deg); }
+  55% {
+    clip: rect(36px, 9999px, 36px, 0);
+    transform: skew(0.36deg); }
+  60% {
+    clip: rect(72px, 9999px, 18px, 0);
+    transform: skew(0.98deg); }
+  65% {
+    clip: rect(59px, 9999px, 24px, 0);
+    transform: skew(0.32deg); }
+  70% {
+    clip: rect(82px, 9999px, 56px, 0);
+    transform: skew(0.63deg); }
   75% {
-    clip: rect(63px, 9999px, 63px, 0);
-    transform: skew(0.65deg); }
+    clip: rect(66px, 9999px, 71px, 0);
+    transform: skew(0.6deg); }
   80% {
-    clip: rect(48px, 9999px, 96px, 0);
-    transform: skew(0.25deg); }
+    clip: rect(60px, 9999px, 34px, 0);
+    transform: skew(0.72deg); }
   85% {
-    clip: rect(97px, 9999px, 87px, 0);
-    transform: skew(0.3deg); }
+    clip: rect(55px, 9999px, 81px, 0);
+    transform: skew(0.8deg); }
   90% {
-    clip: rect(34px, 9999px, 16px, 0);
-    transform: skew(0.26deg); }
+    clip: rect(49px, 9999px, 90px, 0);
+    transform: skew(0.57deg); }
   95% {
-    clip: rect(47px, 9999px, 23px, 0);
-    transform: skew(0.66deg); }
+    clip: rect(65px, 9999px, 70px, 0);
+    transform: skew(0.36deg); }
   100% {
-    clip: rect(4px, 9999px, 23px, 0);
-    transform: skew(0.71deg); } }
+    clip: rect(88px, 9999px, 36px, 0);
+    transform: skew(0.65deg); } }
 @keyframes glitch-skew {
   0% {
-    transform: skew(1deg); }
+    transform: skew(2deg); }
   10% {
-    transform: skew(-2deg); }
+    transform: skew(2deg); }
   20% {
-    transform: skew(-3deg); }
+    transform: skew(5deg); }
   30% {
-    transform: skew(4deg); }
+    transform: skew(-3deg); }
   40% {
-    transform: skew(-1deg); }
-  50% {
-    transform: skew(-4deg); }
-  60% {
     transform: skew(-2deg); }
+  50% {
+    transform: skew(3deg); }
+  60% {
+    transform: skew(-4deg); }
   70% {
     transform: skew(-4deg); }
   80% {
-    transform: skew(5deg); }
+    transform: skew(-2deg); }
   90% {
-    transform: skew(4deg); }
+    transform: skew(-1deg); }
   100% {
     transform: skew(-2deg); } }
 main {
@@ -247,7 +247,7 @@ main {
     width: 197px;
     height: 602px;
     transform: skew(-13deg);
-    box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3);
+    box-shadow: -3px -4px 140px 0px rgba(93, 252, 134, 0.6);
     margin: 0 25px; }
   .extracts-section__sceneImage {
     width: 416px;
@@ -255,14 +255,17 @@ main {
     position: absolute;
     z-index: 4;
     transform: skew(17deg);
-    left: -98px; }
+    left: -98px;
+    transition-property: width, height, z-index, left, top;
+    transition-duration: 0.2s;
+    transition-timing-function: linear; }
     .extracts-section__sceneImage:hover {
       width: 480px;
       height: 680px;
       z-index: 5;
-      top: -40px;
       left: -145px;
-      animation: imageHover 0.5s; }
+      top: -37px;
+      cursor: pointer; }
 
 .menuDiv {
   width: 1244px;
@@ -275,28 +278,55 @@ main {
   display: none;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+    /* &__watch{
+        color: #5DFC86;
+        border: solid 2px #5DFC86;
+        padding: 14px 29px;
+        font-size: 1.6em;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: #5DFC86;
+            color: black;
+            transition: .3s;
+        }
+    } */ }
   .menuDiv__recue {
-    color: #1B791C;
-    border: solid 2px #1B791C;
+    color: #5DFC86;
+    border: solid 2px #5DFC86;
     padding: 14px 29px;
     font-size: 1.6em; }
     .menuDiv__recue:hover {
-      background-color: #1B791C;
-      color: black; }
+      background-color: #5DFC86;
+      color: black;
+      transition: .3s; }
+  .menuDiv__film {
+    margin-top: 20px; }
   .menuDiv__about {
-    color: #1B791C;
+    color: #5DFC86;
     margin-top: 20px;
     font-size: 1.3em; }
+    .menuDiv__about:hover {
+      text-decoration: underline; }
   .menuDiv__cookies {
-    color: #1B791C;
+    color: #5DFC86;
     margin-top: 20px;
     font-size: 1em;
     margin-left: 10px; }
+    .menuDiv__cookies:hover {
+      text-decoration: underline; }
 
 .menuAbout {
+  width: 98% !important;
   left: 25px !important;
-  height: 472px !important;
+  height: 464px !important;
+  transform: none !important; }
+
+.menuCookies {
+  width: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
   transform: none !important; }
 
 .displayMenu {
@@ -322,7 +352,8 @@ main {
     right: 22px;
     top: 12px; }
     .playerDiv__close:hover {
-      filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%); }
+      filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
+      cursor: pointer; }
 
 .displayPlayerDiv {
   display: block; }
@@ -334,11 +365,10 @@ ABOUT
   font-family: 'Courier';
   background: black;
   width: 1388px;
-  /* Pour les 13 pouces 1100px a peu près c'est bon */
   margin: 0 auto;
   margin-top: 79px;
   transform: skew(-13deg);
-  box-shadow: 0px 0px 70px 50px rgba(81, 151, 48, 0.3); }
+  box-shadow: -3px -4px 140px 0px rgba(93, 252, 134, 0.6); }
 
 .main__flex {
   display: flex;
@@ -354,10 +384,11 @@ div[class^="about_"] {
   transform: skew(13deg); }
 
 div[class^="about_"] h3 {
-  color: #1B791C; }
+  color: #5DFC86; }
 
 div[class^="about_"] img {
-  margin-top: 30px; }
+  padding-top: 30px;
+  margin: 0 auto; }
 
 div[class^="about_"] ul {
   list-style: none;
@@ -403,30 +434,31 @@ div[class^="about_"] ul li {
   left: -2%;
   top: 30%; }
 
+/* Social media */
 .social a {
   margin: 30px auto;
   margin-left: 141px;
   cursor: pointer; }
   .social a:hover {
-    filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%);
+    filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
     transition: .3s; }
 
 .social::before {
   content: '';
   border: 1px #ffffff solid;
-  width: 40px;
+  width: 110px;
   transform: rotate(90deg);
   margin-bottom: 60px;
-  margin-left: 132px;
+  margin-left: 95px;
   z-index: 7; }
 
 .social::after {
   content: '';
   border: 1px #ffffff solid;
-  width: 40px;
+  width: 110px;
   transform: rotate(90deg);
   margin-top: 60px;
-  margin-left: 132px; }
+  margin-left: 95px; }
 
 @keyframes imageHover {
   from {
@@ -440,6 +472,10 @@ div[class^="about_"] ul li {
     z-index: 5;
     top: -40px;
     left: -145px; } }
+/* Cookies */
+.cookies__text {
+  padding: 50px; }
+
 /* AUDIO CONTROL */
 .sound__control {
   width: 100%;
@@ -449,9 +485,9 @@ div[class^="about_"] ul li {
 .mute {
   padding: 15px;
   width: 25px;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(205deg) brightness(101%) contrast(104%); }
+  filter: brightness(0) invert(1); }
   .mute:hover {
-    filter: invert(65%) sepia(10%) saturate(5296%) hue-rotate(75deg) brightness(88%) contrast(69%);
+    filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
     transition: .3s;
     cursor: pointer; }
 
@@ -473,7 +509,14 @@ RESPONSIVE
   .extracts-section__sceneImage {
     width: 306px;
     height: 482px;
-    left: -158px; }
+    left: -158px;
+    z-index: 4; }
+    .extracts-section__sceneImage:hover {
+      z-index: 5;
+      width: 350px;
+      height: 530px;
+      left: -193px;
+      top: -26px; }
 
   .main__about {
     width: 1010px; }
@@ -500,10 +543,17 @@ RESPONSIVE
     width: 924px;
     left: 0px;
     height: 482px;
-    transform: skew(-11deg); } }
-/*
-RESPONSIVE
-*/
+    transform: skew(-11deg); }
+
+  .social {
+    left: -60px;
+    top: 241px; }
+    .social::before {
+      width: 70px;
+      margin-left: 115px; }
+    .social::after {
+      width: 70px;
+      margin-left: 115px; } }
 @media screen and (max-width: 1220px) {
   header {
     width: 740px; }
@@ -514,12 +564,19 @@ RESPONSIVE
   .extracts-section__shadowDiv {
     width: 11px;
     height: 387px;
-    margin: 0px 66px; }
+    margin: 0px 66px;
+    box-shadow: -20px -2px 70px 60px rgba(93, 252, 134, 0.2); }
 
   .extracts-section__sceneImage {
     width: 232px;
     height: 392px;
     left: -130px; }
+    .extracts-section__sceneImage:hover {
+      z-index: 5;
+      width: 264px;
+      height: 445px;
+      left: -153px;
+      top: -26px; }
 
   .main__about {
     width: 740px; }
@@ -542,7 +599,19 @@ RESPONSIVE
     padding: 10px 0 !important; }
 
   .about__synopsis p {
-    height: 250px; } }
+    height: 250px; }
+
+  .menuDiv {
+    width: 706px;
+    left: -4px;
+    height: 396px !important;
+    transform: skew(-11deg); }
+
+  .playerDiv__video {
+    width: 879px; }
+
+  .playerDiv {
+    top: -70px; } }
 @media screen and (max-width: 981px) {
   header {
     width: 470px; }
@@ -555,6 +624,21 @@ RESPONSIVE
     margin: 10px 66px; }
 
   .main__about {
-    width: 740px; } }
+    width: 740px; }
+
+  .social {
+    left: 7px;
+    top: 254px; }
+    .social::before {
+      width: 60px;
+      margin-left: 11px; }
+    .social::after {
+      width: 60px;
+      margin-left: 7px; }
+    .social a {
+      margin: 13px auto; } }
+@media screen and (max-width: 770px) {
+  .extracts-section {
+    width: 290px; } }
 
 /*# sourceMappingURL=style-site-institutionnel.css.map */
