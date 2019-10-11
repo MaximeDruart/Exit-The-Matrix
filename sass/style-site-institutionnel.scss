@@ -207,6 +207,24 @@ main{
         }
     }
 
+    &__film{
+        margin-top: 20px;
+    }
+
+    /* &__watch{
+        color: #5DFC86;
+        border: solid 2px #5DFC86;
+        padding: 14px 29px;
+        font-size: 1.6em;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: #5DFC86;
+            color: black;
+            transition: .3s;
+        }
+    } */
+
     &__about {
         color: #5DFC86;
         margin-top: 20px;
@@ -319,7 +337,8 @@ div[class^="about_"] h3{
 }
 
 div[class^="about_"] img{
-    margin-top: 30px;
+    padding-top: 30px;
+    margin: 0 auto;
 }
 
 div[class^="about_"] ul{
