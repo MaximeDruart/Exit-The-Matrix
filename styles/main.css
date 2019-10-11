@@ -145,8 +145,12 @@ body{
   text-shadow:  1px 1px 10px #5DFC86;
 }
 
+.littleDevicesOverlay{
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
-  
+
   .littleDevicesOverlay{
     background: black;
     width: 100vw;
