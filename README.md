@@ -23,7 +23,10 @@ To try our website, you can visit this [link](https://maximedruart.github.io/Exi
 ## Authors
 
 * [Hugo Lhernould](https://github.com/hugolhld) - *Developper* 
-* [Clément Borie](https://github.com/clementborie) - *Project leader designer* 
+* [Clément Borie](https://github.com/clementborie) - *Project leader - designer* 
+* [Eythan Saillet](https://github.com/eythanSaillet) - *Developper - Designer*
+* [Maxime Druart](https://github.com/MaximeDruart) - *Developper - Designer* 
+* [Constant Gillet](https://github.com/constantgillet) - *Developper - Designer* 
 
 ## Legal notice
 
