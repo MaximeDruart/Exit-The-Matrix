@@ -37,7 +37,7 @@ function draw()
 	ctx.fillStyle = textColor 
 	ctx.font = font_size + 'px arial';
 
-	//looping over drops
+	//loop for over drops
 	for(let i = 0; i < drops.length; i++)
 	{  
 		//Chosing randomly a letter from the string 

@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Cookies</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What about Matrix ?">
+    <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Legal Notice</title>
+    <link rel="stylesheet" href="styles/style-site-institutionnel.css">
 </head>
 <body>
-    
+    <canvas class="matrix-canvas">
+    </canvas>
+        <div class="main-container">
+                <!-- header start -->
+            <header>
+                <h2 class="header--Mainlogo"><a href="movie-scenes.html" data-text="matrix" class="matrix">Matrix</a></h2>
+                <svg class="header--ButtonMenu"></svg>
+            </header> <!--Header end-->
+            <main>
+                <div class="social">
+                    <a href="https://www.facebook.com/TheMatrixMovie/"><img src="images/fb.svg" alt="facebook"></a>
+                    <a href="https://twitter.com/hashtag/matrix"><img src="images/twitter.svg" alt="twitter"></a>
+                    <a href="https://www.instagram.com/explore/tags/thematrix/?hl=fr"><img src="images/insta.svg" alt="instagram"></a>
+                </div>
+                <div class="main__about">
+                    <div class="cookies__text">
+                            This work was carried out as part of a pedagogical project and for pedagogical purposes. The exploitation rights have not been audited or acquired.
+                    </div>
+                    <!-- Menu div start -->
+                     <div class="menuDiv menuAbout">
+                        <a href="movie-scenes.html" title="Sauver Neo" class="menuDiv__recue ">Rescue Neo</a>
+                        <a href="about.html" title="En savoir plus" class="menuDiv__about">Learn more</a>
+                        <a href="cookies.html" title="Mentions légales" class="menuDiv__cookies">Legal notice</a>
+                    </div> <!-- Menu div end -->
+                </div>
+            </main>
+            <div class="sound__control">
+                <img src="images/mute.svg" alt="sound" class="mute">
+                <audio autoplay loop>
+                    <source src="sounds/backInstit.mp3" type="audio/mpeg" >
+                </audio>
+            </div>
+        <!-- Canvas background Matrix fall script -->
+        <script src="scripts/scriptMatrixFall.js"></script>
+        <!-- Script of the menu -->
+        <script src="scripts/scriptMenu.js"></script>
 </body>
 </html>
