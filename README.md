@@ -5,7 +5,9 @@ Live an immersive experience around the matrix universe, Review the cult matrix 
 ## Screenshots
 
 ![alt text](https://i.ibb.co/64HbMjT/screenshot1.jpg)
+![alt text](https://i.ibb.co/dbHmRvj/screenshot2.jpg)
 ![alt text](https://i.ibb.co/Pj9tYG5/screenshot3.jpg)
+
 
 ## Deployment
 
