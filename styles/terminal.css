@@ -3,11 +3,10 @@
   margin: 0;
   padding: 0;
   color: #5DFC86;
-  text-shadow: 1px 1px 10px #5DFC86;
   box-sizing: border-box; }
 
-* {
-  box-sizing: border-box; }
+*:not(.containerIntro_openOverlay) {
+  text-shadow: 1px 1px 10px #5DFC86; }
 
 .containerIntro_openOverlay_buttonsA * {
   box-sizing: content-box !important; }
@@ -40,6 +39,7 @@ body {
   font-family: 'orbitron_bold'; }
 
 .container {
+  pointer-events: none;
   box-sizing: border-box;
   background-image: url("../images/bg2.png");
   background-size: cover;

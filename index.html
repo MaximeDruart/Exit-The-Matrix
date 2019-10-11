@@ -20,8 +20,8 @@
     <div class="finishOverlay">
       <div class="finishOverlay_lose">
         <div>
-          <a href="index.html#noanime">TRY AGAIN</a>
-          <a href="movie-scenes.html">WEBSITE</a>
+          <a class="refresh" href="index.html#noanim">TRY AGAIN</a>
+          <a href="https://maximedruart.github.io/Exit-The-Matrix/movie-scenes">WEBSITE</a>
         </div>
       </div>
       <div class="finishOverlay_win">
@@ -29,8 +29,8 @@
           <p>SUCCES</p>
           <p>NEO CAME OUT OF THE MATRIX</p>
           <div class="finishOverlay_win_container_buttonsContainer">
-            <a href="movie-scenes.html">WEBSITE</a>
-            <a href="#">PLAY AGAIN</a>
+            <a href="https://maximedruart.github.io/Exit-The-Matrix/movie-scenes">WEBSITE</a>
+            <a class="refresh" href="index.html#noanim">PLAY AGAIN</a>
           </div>
         </div>
       </div>
@@ -89,6 +89,7 @@
       document.querySelector(".containerIntro").style.display = "none"
       TweenMax.to(".container .terminal", 0.6, {opacity:1})
       document.querySelector(".initialInput").focus()
+      document.querySelector("body").style.cursor = "none"
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
