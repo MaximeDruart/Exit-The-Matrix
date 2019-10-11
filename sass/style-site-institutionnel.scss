@@ -67,6 +67,7 @@ header {
 
         &:hover {
             filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
+            cursor: pointer;
         }
     }
 }
@@ -175,6 +176,7 @@ main{
             z-index: 5;
             left: -145px;
             top: -37px;
+            cursor: pointer;
         }
     }
 }
@@ -234,6 +236,13 @@ main{
     transform: none !important; 
 }
 
+.menuCookies{
+    width: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important; 
+}
+
 .displayMenu {
     display: flex;
     
@@ -266,6 +275,7 @@ main{
 
         &:hover {
             filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
+            cursor: pointer;
         }
     }
 }
@@ -281,7 +291,7 @@ ABOUT
 .main__about {
     font-family: 'Courier';
     background: black;
-    width: 1388px; /* Pour les 13 pouces 1100px a peu près c'est bon */
+    width: 1388px;
     margin: 0 auto;
     margin-top: 79px;
     transform: skew(-13deg);
@@ -361,6 +371,8 @@ div[class^="about_"] ul li{
     left: -2%;
     top: 30%;
 }
+
+/* Social media */
 
 .social a{
     margin: 30px auto;
