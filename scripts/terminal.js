@@ -81,6 +81,7 @@ class Terminal {
         this.textColor = "#5DFC86"
         this.time1 = ""
         this.time2 = ""
+        this.plsTank = ""
 
         this.caretBlink()
         this.setInputListener()
@@ -95,9 +96,9 @@ class Terminal {
     }
 
     timeCheckSup10() {
-        let delaySec = 12
+        let delaySec = 20
         this.time1 = new Date()
-        setInterval(() => {
+        this.plsTank = setInterval(() => {
             this.time2 = new Date()
             if (Math.round((this.time2 - this.time1) / 1000) > delaySec) {
                 this.playAudio(this.audios["help2"].src)
@@ -203,9 +204,13 @@ class Terminal {
                         /INFO "info" : returns info on specified item
                         /SETCOLOR "hex color" : changes interface color
                         /UWU : Authorized access only
+                        /GOTOSITE : Go to the main site
                     `)
                     break;
 
+                case "/gotosite":
+                    window.location.href = "maxime.druart.github.io/"
+                    break;
 
                 case "/info":
                     this.write("info")
@@ -506,30 +511,35 @@ class Terminal {
         this.playAudio(this.audios["iGotIt"].src)
         this.neoChatWrite(this.audios["iGotIt"].transcript)
         let tl = new TimelineMax({
-            paused:true
+            paused:true,
+            ease:"linear",
         })
         if (this.neoPosition == "f6") {
             switch (position) {
                 case "[b4]":
                     this.winPosition = true
-                    tl.to(".neoPos", 2.4, {x:-120} )
-                    tl.to(".neoPos", 3.6, {y:-180} )
+                    tl.to(".neoPos", 4.8, {ease: Power0.easeNone,x:-120} )
+                    tl.to(".neoPos", 7.2, {ease: Power0.easeNone,y:-180} )
                     break;
 
                 case "[h3]":
-                    tl.to(".neoPos", 2.4, {x:-120} )
-                    tl.to(".neoPos", 1.8, {y:92} )
+                    tl.to(".neoPos", 4.8, {ease: Power0.easeNone,x:-120} )
+                    tl.to(".neoPos", 3.6, {ease: Power0.easeNone,y:92} )
                     break;
 
                 case "[g9]":
                     this.isLost = true
-                    tl.to(".neoPos", 1.8, {x:90} )
-                    // tl.to(".neoPos", 0.5, {y:25} )
+                    tl.to(".neoPos", 3.6, {ease: Power0.easeNone,x:90} )
+                    // tl.to(".neoPos", 0.5, {ease: Power0.easeNone,y:25} )
                     break;
 
                 case "[d6]":
+                    setTimeout(() => {                        
+                        this.playAudio(this.audios["agent"].src)
+                        this.neoChatWrite(this.audios["agent"].transcript)
+                    }, 800);
                     this.isLost = true
-                    tl.to(".neoPos", 1.8, {y:-90} )
+                    tl.to(".neoPos", 3.6, {ease: Power0.easeNone,y:-90} )
                     break;
 
                 default:
@@ -539,21 +549,24 @@ class Terminal {
           switch (position) {
               case "[b4]":
                   this.winPosition = true
-                  tl.to(".neoPos", 3.6, {y:270} )
+                  tl.to(".neoPos", 7.2, {ease: Power0.easeNone,y:-220} )
+                  tl.to(".neoPos", 7.2, {ease: Power0.easeNone,x:30} )
                   break;
 
                 case "[g9]":
                   this.isLost = true
-                  tl.to(".neoPos", 1.8, {y:-90} )
-                  tl.to(".neoPos", 4.2, {x:210} )
-                  tl.to(".neoPos", 0.5, {y:25} )
+                  tl.to(".neoPos", 3.6, {ease: Power0.easeNone,y:12} )
+                  tl.to(".neoPos", 8.2, {ease: Power0.easeNone,x:180} )
+                  tl.to(".neoPos", 1.2, {ease: Power0.easeNone,y:32} )
                   break;
 
               case "[d6]":
+                  setTimeout(() => {                      
+                      this.playAudio(this.audios["agent"].src)
+                      this.neoChatWrite(this.audios["agent"].transcript)
+                  }, 800);
                   this.isLost = true
-                  tl.to(".neoPos", 1.8, {y:-90} )
-                  tl.to(".neoPos", 4.2, {x:120} )
-                  tl.to(".neoPos", 1.8, {y:-90} )
+                  tl.to(".neoPos", 3.6, {ease: Power0.easeNone,y:-68} )
                   break;
 
               default:
@@ -563,26 +576,32 @@ class Terminal {
         tl.play()
         setTimeout(() => {
             this.checkWinOrLose(position)
+            if (position == "[b4]" && !this.phonesCalling[b4]) {                
+                this.playAudio(this.audios["canYouCall"].src)
+                this.neoChatWrite(this.audios["canYouCall"].transcript)
+            }
         }, tl.duration()*1000);
     }
 
     checkWinOrLose(position){
       // if player is on the win spot and phone is calling
       if (this.winPosition && !this.phonesCalling[position]) {
-        this.playAudio(this.audios["canYouCall"].src)
-        this.neoChatWrite(this.audios["canYouCall"].transcript)
         setTimeout(() => {
             this.checkWinOrLose()
-        }, 5000);
-      }
+        }, 2000);
+    }
+
+        // win
       if (this.winPosition && this.phonesCalling[position]) {
-            console.log("win !")
-            TweenMax.set(".finishOverlay_lose", {display:"block"})
+            clearInterval(this.plsTank)
+            document.querySelector(".finishOverlay").style.display = "block"
+            document.querySelector(".finishOverlay_win").style.display = "flex"
         }
 
+        // lose
       if (this.isLost){
-        console.log("lose !")
-        TweenMax.set(".finishOverlay_win", {display:"block"})
+            document.querySelector(".finishOverlay").style.display = "block"
+            document.querySelector(".finishOverlay_lose").style.display = "flex"
       }
     }
 

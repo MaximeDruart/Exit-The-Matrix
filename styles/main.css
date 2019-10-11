@@ -112,6 +112,7 @@ body{
   left: 0;
   font-family: 'Inconsolata', monospace;
   z-index: 11;
+  background: black;
 }
 
 /* Lose */
