@@ -67,6 +67,7 @@ header {
 
         &:hover {
             filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
+            cursor: pointer;
         }
     }
 }
@@ -175,6 +176,7 @@ main{
             z-index: 5;
             left: -145px;
             top: -37px;
+            cursor: pointer;
         }
     }
 }
@@ -205,6 +207,24 @@ main{
         }
     }
 
+    &__film{
+        margin-top: 20px;
+    }
+
+    /* &__watch{
+        color: #5DFC86;
+        border: solid 2px #5DFC86;
+        padding: 14px 29px;
+        font-size: 1.6em;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: #5DFC86;
+            color: black;
+            transition: .3s;
+        }
+    } */
+
     &__about {
         color: #5DFC86;
         margin-top: 20px;
@@ -231,6 +251,13 @@ main{
     width: 98% !important;
     left: 25px !important;
     height: 464px !important; 
+    transform: none !important; 
+}
+
+.menuCookies{
+    width: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
     transform: none !important; 
 }
 
@@ -266,6 +293,7 @@ main{
 
         &:hover {
             filter: invert(75%) sepia(72%) saturate(389%) hue-rotate(73deg) brightness(104%) contrast(98%);
+            cursor: pointer;
         }
     }
 }
@@ -281,7 +309,7 @@ ABOUT
 .main__about {
     font-family: 'Courier';
     background: black;
-    width: 1388px; /* Pour les 13 pouces 1100px a peu près c'est bon */
+    width: 1388px;
     margin: 0 auto;
     margin-top: 79px;
     transform: skew(-13deg);
@@ -309,7 +337,8 @@ div[class^="about_"] h3{
 }
 
 div[class^="about_"] img{
-    margin-top: 30px;
+    padding-top: 30px;
+    margin: 0 auto;
 }
 
 div[class^="about_"] ul{
@@ -361,6 +390,8 @@ div[class^="about_"] ul li{
     left: -2%;
     top: 30%;
 }
+
+/* Social media */
 
 .social a{
     margin: 30px auto;
