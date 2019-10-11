@@ -95,7 +95,6 @@ class Terminal {
     // workaround un peu cheap pour refocus sur l'input
     periodicFocus(){
         setInterval(() => {
-            console.log("foc")
             this.setFocus()
         }, 1500);
     }
@@ -504,7 +503,6 @@ class Terminal {
                     case "[f3]":
                         this.switchCams("4")
                         this.write(`Access to camera ${param} authorized`)
-                        console.log(`url(images/${noBrackParam.toUpperCase()}).png`)
                         TweenMax.set(document.querySelector(".cams"), {
                             backgroundImage: `url(images/${noBrackParam.toUpperCase()}.png)`
                         })

@@ -5,7 +5,7 @@
   color: #5DFC86;
   box-sizing: border-box; }
 
-*:not(.containerIntro_openOverlay) {
+*:not(.containerIntro_openOverlay *) {
   text-shadow: 1px 1px 10px #5DFC86; }
 
 .containerIntro_openOverlay_buttonsA * {
