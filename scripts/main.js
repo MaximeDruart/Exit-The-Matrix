@@ -441,3 +441,5 @@ if(screen.width > 1100){
 else{
 
 }
+
+console.log(screen.width)
